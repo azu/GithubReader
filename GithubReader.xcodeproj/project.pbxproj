@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
+		17B5C34E880413EFA6C773AF /* GithubEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CD16A7F31E16EFEEA140 /* GithubEventType.m */; };
+		17B5C3E9D8C817382B14D555 /* GHNotificationBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C16CE4EC0F33272BAC6A /* GHNotificationBaseClass.m */; };
+		17B5C5D7CB4682A5E13A30B4 /* GHNotificationRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2645DD8AD04CCEAC15A /* GHNotificationRepository.m */; };
+		17B5C6DF8CAA6B31BCB25CE7 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9B3C5CF99F7B3A4200A /* GHNotificationSubject.m */; };
+		17B5C79A903E30956457CD30 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CBE3300E4D895E28ED37 /* GHNotificationOwner.m */; };
+		17B5C7A4A5B922F163D7C36A /* OAuthGithubKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */; };
+		17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
+		17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2911879E10E106C4965 /* OAuthGithub.m */; };
+		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
+		7376362F170B179800476F14 /* OAuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376362D170B179800476F14 /* OAuthWindowController.m */; };
+		73763630170B179800476F14 /* OAuthWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7376362E170B179800476F14 /* OAuthWindowController.xib */; };
 		73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E5F8D0170B131E00CB7D65 /* Cocoa.framework */; };
 		73E5F8DB170B131E00CB7D65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8D9170B131E00CB7D65 /* InfoPlist.strings */; };
 		73E5F8DD170B131E00CB7D65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E5F8DC170B131E00CB7D65 /* main.m */; };
@@ -16,6 +28,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10D691F810CC4663AA86AB71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithubKeys.h; sourceTree = "<group>"; };
+		17B5C09E4D02460DF473728E /* GHNotificationSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationSubject.h; sourceTree = "<group>"; };
+		17B5C16CE4EC0F33272BAC6A /* GHNotificationBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationBaseClass.m; sourceTree = "<group>"; };
+		17B5C1F9ECC621792C79B8B5 /* GithubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubAPI.h; sourceTree = "<group>"; };
+		17B5C2645DD8AD04CCEAC15A /* GHNotificationRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationRepository.m; sourceTree = "<group>"; };
+		17B5C2911879E10E106C4965 /* OAuthGithub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithub.m; sourceTree = "<group>"; };
+		17B5C2D6FA1F9539419D7E6B /* GHNotificationOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationOwner.h; sourceTree = "<group>"; };
+		17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithubKeys.m; sourceTree = "<group>"; };
+		17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConfig.m; sourceTree = "<group>"; };
+		17B5C55CCD8C84DBE7CACFF6 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		17B5C8080B7BA7B282EE877D /* GithubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubAPI.m; sourceTree = "<group>"; };
+		17B5C89673EB3549FCB04AF8 /* GithubEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubEventType.h; sourceTree = "<group>"; };
+		17B5C958BA87C61DF84CBACE /* OAuthGithub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithub.h; sourceTree = "<group>"; };
+		17B5C9B3C5CF99F7B3A4200A /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
+		17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConfig.h; sourceTree = "<group>"; };
+		17B5CBE3300E4D895E28ED37 /* GHNotificationOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationOwner.m; sourceTree = "<group>"; };
+		17B5CCB822088853BCFADB36 /* GHNotificationBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationBaseClass.h; sourceTree = "<group>"; };
+		17B5CD16A7F31E16EFEEA140 /* GithubEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubEventType.m; sourceTree = "<group>"; };
+		17B5CDE2BFBFB4AF42A0BD13 /* GHNotificationRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationRepository.h; sourceTree = "<group>"; };
+		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
+		7376362D170B179800476F14 /* OAuthWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWindowController.m; sourceTree = "<group>"; };
+		7376362E170B179800476F14 /* OAuthWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthWindowController.xib; sourceTree = "<group>"; };
 		73E5F8CD170B131E00CB7D65 /* GithubReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E5F8D0170B131E00CB7D65 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		73E5F8D3170B131E00CB7D65 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +64,7 @@
 		73E5F8E2170B131E00CB7D65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		73E5F8E3170B131E00CB7D65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		73E5F8E6170B131E00CB7D65 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,18 +73,119 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */,
+				1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B5C13496E93A8842C3369C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C82AB5AAA2880472DD12 /* OAuth */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		17B5C13D12E08089E1B13A99 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CFF832DC61EF1ED5EDA6 /* OAuth */,
+				17B5C1F9ECC621792C79B8B5 /* GithubAPI.h */,
+				17B5C8080B7BA7B282EE877D /* GithubAPI.m */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		17B5C1A8081103821EC87A1A /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C55CCD8C84DBE7CACFF6 /* DataModels.h */,
+				17B5C2D6FA1F9539419D7E6B /* GHNotificationOwner.h */,
+				17B5CBE3300E4D895E28ED37 /* GHNotificationOwner.m */,
+				17B5C09E4D02460DF473728E /* GHNotificationSubject.h */,
+				17B5C9B3C5CF99F7B3A4200A /* GHNotificationSubject.m */,
+				17B5CCB822088853BCFADB36 /* GHNotificationBaseClass.h */,
+				17B5C16CE4EC0F33272BAC6A /* GHNotificationBaseClass.m */,
+				17B5CDE2BFBFB4AF42A0BD13 /* GHNotificationRepository.h */,
+				17B5C2645DD8AD04CCEAC15A /* GHNotificationRepository.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		17B5C453CE8EC0BF7C5E673C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C1A8081103821EC87A1A /* Notifications */,
+				17B5C89673EB3549FCB04AF8 /* GithubEventType.h */,
+				17B5CD16A7F31E16EFEEA140 /* GithubEventType.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17B5C82AB5AAA2880472DD12 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				7376362C170B179800476F14 /* OAuthWindowController.h */,
+				7376362D170B179800476F14 /* OAuthWindowController.m */,
+				7376362E170B179800476F14 /* OAuthWindowController.xib */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		17B5C8951F9DDC4519034757 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C453CE8EC0BF7C5E673C /* Models */,
+				17B5C13496E93A8842C3369C /* Controllers */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		17B5CAF7015315A86349ED4D /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */,
+				17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		17B5CCD7B9D83BD160F3E1FA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CAF7015315A86349ED4D /* OAuth */,
+				17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */,
+				17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		17B5CF2F070FB2C382626EF4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C13D12E08089E1B13A99 /* Github */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		17B5CFF832DC61EF1ED5EDA6 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C958BA87C61DF84CBACE /* OAuthGithub.h */,
+				17B5C2911879E10E106C4965 /* OAuthGithub.m */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		73E5F8C4170B131E00CB7D65 = {
 			isa = PBXGroup;
 			children = (
 				73E5F8D6170B131E00CB7D65 /* GithubReader */,
 				73E5F8CF170B131E00CB7D65 /* Frameworks */,
 				73E5F8CE170B131E00CB7D65 /* Products */,
+				92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +202,7 @@
 			children = (
 				73E5F8D0170B131E00CB7D65 /* Cocoa.framework */,
 				73E5F8D2170B131E00CB7D65 /* Other Frameworks */,
+				10D691F810CC4663AA86AB71 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +224,9 @@
 				73E5F8E3170B131E00CB7D65 /* AppDelegate.m */,
 				73E5F8E5170B131E00CB7D65 /* MainMenu.xib */,
 				73E5F8D7170B131E00CB7D65 /* Supporting Files */,
+				17B5C8951F9DDC4519034757 /* App */,
+				17B5CCD7B9D83BD160F3E1FA /* Config */,
+				17B5CF2F070FB2C382626EF4 /* Lib */,
 			);
 			path = GithubReader;
 			sourceTree = "<group>";
@@ -112,6 +253,7 @@
 				73E5F8C9170B131E00CB7D65 /* Sources */,
 				73E5F8CA170B131E00CB7D65 /* Frameworks */,
 				73E5F8CB170B131E00CB7D65 /* Resources */,
+				713B20ABE51444939D9BA8FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,10 +298,28 @@
 				73E5F8DB170B131E00CB7D65 /* InfoPlist.strings in Resources */,
 				73E5F8E1170B131E00CB7D65 /* Credits.rtf in Resources */,
 				73E5F8E7170B131E00CB7D65 /* MainMenu.xib in Resources */,
+				73763630170B179800476F14 /* OAuthWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		713B20ABE51444939D9BA8FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73E5F8C9170B131E00CB7D65 /* Sources */ = {
@@ -168,6 +328,16 @@
 			files = (
 				73E5F8DD170B131E00CB7D65 /* main.m in Sources */,
 				73E5F8E4170B131E00CB7D65 /* AppDelegate.m in Sources */,
+				17B5C79A903E30956457CD30 /* GHNotificationOwner.m in Sources */,
+				17B5C6DF8CAA6B31BCB25CE7 /* GHNotificationSubject.m in Sources */,
+				17B5C3E9D8C817382B14D555 /* GHNotificationBaseClass.m in Sources */,
+				17B5C5D7CB4682A5E13A30B4 /* GHNotificationRepository.m in Sources */,
+				17B5C34E880413EFA6C773AF /* GithubEventType.m in Sources */,
+				17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */,
+				17B5C7A4A5B922F163D7C36A /* OAuthGithubKeys.m in Sources */,
+				17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */,
+				17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */,
+				7376362F170B179800476F14 /* OAuthWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +432,7 @@
 		};
 		73E5F8EB170B131E00CB7D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -274,6 +445,7 @@
 		};
 		73E5F8EC170B131E00CB7D65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -303,6 +475,7 @@
 				73E5F8EC170B131E00CB7D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
