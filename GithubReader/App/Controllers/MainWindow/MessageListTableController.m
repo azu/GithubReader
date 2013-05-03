@@ -12,7 +12,6 @@
 #import "GHNotification.h"
 #import "NSArray+Funcussion.h"
 #import "GHNotificationSubject.h"
-#import "GHNotificationRepository.h"
 #import "GHRepoComments.h"
 
 @interface MessageListTableController ()

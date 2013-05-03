@@ -48,8 +48,8 @@
     NSString *state = [OAuthGithub generateState];
     [OAuthGithub sharedObject].state = state;
     [OAuthGithub sharedObject].enable = YES;
-    NSString *urlString = [NSString stringWithFormat:@"https://github.com/login/oauth/authorize?client_id=%@&scope=%@&state=%@", kClientId, scope, state];
-    NSLog(@"urlString = %@", urlString);
+    NSString *urlString = [NSString stringWithFormat:@"https://github.com/login/oauth/authorize?client_id=%@&scope=%@&state=%@",
+                                                     GithubAppAttributes.clientID, scope, state];
     NSURL *url = [NSURL URLWithString:urlString];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }

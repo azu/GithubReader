@@ -42,8 +42,8 @@
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     NSDictionary *params = @{
         @"code" : code,
-        @"client_id" : kClientId,
-        @"client_secret" : kClientSecret,
+        @"client_id" : GithubAppAttributes.clientID,
+        @"client_secret" : GithubAppAttributes.clientSecret,
         @"state" : self.state
     };
     NSMutableURLRequest *request = [client requestWithMethod:@"POST" path:@"/login/oauth/access_token" parameters:params];

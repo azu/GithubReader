@@ -5,7 +5,10 @@
 
 #import <Foundation/Foundation.h>
 
-#define kClientId @"c8aa47d0294b6a7a9f82"
-#define kClientSecret @"2d234bd6c46e851692ea702fcda072851d3a26da"
+extern const struct GithubAppAttributes {
+    __unsafe_unretained NSString *clientID;
+    __unsafe_unretained NSString *clientSecret;
+} GithubAppAttributes;
+
 @interface OAuthGithubKeys : NSObject
 @end

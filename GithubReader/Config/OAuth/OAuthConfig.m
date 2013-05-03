@@ -12,7 +12,7 @@
 
 extern const struct OAuthAttributes {
     __unsafe_unretained NSString *accessToken;
-}OAuthAttributes;
+} OAuthAttributes;
 
 
 const struct OAuthAttributes OAuthAttributes = {
