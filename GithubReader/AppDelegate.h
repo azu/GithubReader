@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class WebView;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet WebView *webView;
 
 @end

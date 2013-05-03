@@ -1,22 +1,22 @@
 //
-//  GHNotificationBaseClass.m
+//  GHNotification.m
 //
 //  Created by   on 2013/03/17
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "GHNotificationBaseClass.h"
+#import "GHNotification.h"
 #import "GHNotificationRepository.h"
 #import "GHNotificationSubject.h"
 
 
-@interface GHNotificationBaseClass ()
+@interface GHNotification ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation GHNotificationBaseClass
+@implementation GHNotification
 
 @synthesize reason = _reason;
 @synthesize unread = _unread;
@@ -29,9 +29,9 @@
 @synthesize url = _url;
 
 
-+ (GHNotificationBaseClass *)modelObjectWithDictionary:(NSDictionary *)dict
++ (GHNotification *)modelObjectWithDictionary:(NSDictionary *)dict
 {
-    GHNotificationBaseClass *instance = [[GHNotificationBaseClass alloc] initWithDictionary:dict];
+    GHNotification *instance = [[GHNotification alloc] initWithDictionary:dict];
     return instance;
 }
 

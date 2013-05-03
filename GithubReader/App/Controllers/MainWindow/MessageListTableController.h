@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MessageListTableController : NSObject<NSTableViewDataSource,NSTabViewDelegate>
+@interface MessageListTableController : NSWindowController<NSTableViewDataSource,NSTableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSTableView *tableView;
 

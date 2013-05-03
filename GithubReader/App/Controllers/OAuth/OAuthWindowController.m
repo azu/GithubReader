@@ -44,7 +44,7 @@
 
 - (IBAction)handleOAuthButton:(id) sender {
 
-    NSString *scope = @"";// read only
+    NSString *scope = @"notifications";// read only
     NSString *state = [OAuthGithub generateState];
     [OAuthGithub sharedObject].state = state;
     [OAuthGithub sharedObject].enable = YES;

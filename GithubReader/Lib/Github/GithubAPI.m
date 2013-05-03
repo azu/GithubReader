@@ -30,7 +30,8 @@
        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)) failure {
     NSURL *baseURL = [NSURL URLWithString:@"https://api.github.com/"];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
-    [client setDefaultHeader:@"Authorization" value:[NSString stringWithFormat:@"token %@",[OAuthConfig accessToken]]];
+    NSString *accessTokenFiled = [NSString stringWithFormat:@"token %@",[OAuthConfig accessToken]];
+    [client setDefaultHeader:@"Authorization" value:accessTokenFiled];
     NSMutableURLRequest *request = [client requestWithMethod:method path:endPointPath parameters:parameters];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:success failure:failure];
     [operation start];

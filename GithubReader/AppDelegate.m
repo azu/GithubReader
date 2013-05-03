@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 azu. All rights reserved.
 //
 
+#import <WebKit/WebKit.h>
 #import "AppDelegate.h"
 #import "OAuthConfig.h"
 #import "OAuthGithub.h"
@@ -34,6 +35,13 @@
 - (void)awakeFromNib {
     [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(handleURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthAuthentication:) name:@"OAuthAuthentication" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleWebViewLoad:) name:@"AZWebViewLoad" object:nil];
+
+}
+
+- (void)handleWebViewLoad:(NSNotification *) notification {
+    NSString *URL = notification.userInfo[@"URL"];
+    [self.webView setMainFrameURL:URL];
 
 }
 
@@ -67,5 +75,6 @@
     }
     [[OAuthGithub sharedObject] oauthWithCode:[queries objectForKey:@"code"] state:[queries objectForKey:@"state"]];
 }
+
 
 @end

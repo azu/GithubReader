@@ -5,4 +5,7 @@
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "GHNotificationOwner.h"#import "GHNotificationSubject.h"#import "GHNotificationRepository.h"#import "GHNotificationBaseClass.h"
+#import "GHNotificationOwner.h"
+#import "GHNotificationSubject.h"
+#import "GHNotificationRepository.h"
+#import "GHNotification.h"
