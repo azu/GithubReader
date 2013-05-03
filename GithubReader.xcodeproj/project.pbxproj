@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17B5C3304465BADF6C07D01E /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0664821702648A2E9DC /* MenuController.m */; };
 		17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
 		17B5C34E880413EFA6C773AF /* GithubEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CD16A7F31E16EFEEA140 /* GithubEventType.m */; };
 		17B5C3E9D8C817382B14D555 /* GHNotificationBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C16CE4EC0F33272BAC6A /* GHNotificationBaseClass.m */; };
+		17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CADE32A62AE85CF91E99 /* MessageCellView.m */; };
 		17B5C5D7CB4682A5E13A30B4 /* GHNotificationRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2645DD8AD04CCEAC15A /* GHNotificationRepository.m */; };
 		17B5C6DF8CAA6B31BCB25CE7 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9B3C5CF99F7B3A4200A /* GHNotificationSubject.m */; };
 		17B5C79A903E30956457CD30 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CBE3300E4D895E28ED37 /* GHNotificationOwner.m */; };
@@ -17,8 +19,11 @@
 		17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
 		17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2911879E10E106C4965 /* OAuthGithub.m */; };
 		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
+		7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364246D1733E77D002D5AFD /* WebKit.framework */; };
 		7376362F170B179800476F14 /* OAuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376362D170B179800476F14 /* OAuthWindowController.m */; };
 		73763630170B179800476F14 /* OAuthWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7376362E170B179800476F14 /* OAuthWindowController.xib */; };
+		73763633170B243000476F14 /* GithubNotificationTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73763632170B243000476F14 /* GithubNotificationTableView.m */; };
+		73824B011733C5D600A0291D /* MessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73824B001733C5D600A0291D /* MessageListTableController.m */; };
 		73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E5F8D0170B131E00CB7D65 /* Cocoa.framework */; };
 		73E5F8DB170B131E00CB7D65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8D9170B131E00CB7D65 /* InfoPlist.strings */; };
 		73E5F8DD170B131E00CB7D65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E5F8DC170B131E00CB7D65 /* main.m */; };
@@ -29,28 +34,37 @@
 
 /* Begin PBXFileReference section */
 		10D691F810CC4663AA86AB71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B5C0664821702648A2E9DC /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
 		17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithubKeys.h; sourceTree = "<group>"; };
 		17B5C09E4D02460DF473728E /* GHNotificationSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationSubject.h; sourceTree = "<group>"; };
 		17B5C16CE4EC0F33272BAC6A /* GHNotificationBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationBaseClass.m; sourceTree = "<group>"; };
 		17B5C1F9ECC621792C79B8B5 /* GithubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubAPI.h; sourceTree = "<group>"; };
 		17B5C2645DD8AD04CCEAC15A /* GHNotificationRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationRepository.m; sourceTree = "<group>"; };
+		17B5C27B8B6A20AEC66B233E /* MessageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCellView.h; sourceTree = "<group>"; };
 		17B5C2911879E10E106C4965 /* OAuthGithub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithub.m; sourceTree = "<group>"; };
 		17B5C2D6FA1F9539419D7E6B /* GHNotificationOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationOwner.h; sourceTree = "<group>"; };
 		17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithubKeys.m; sourceTree = "<group>"; };
 		17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConfig.m; sourceTree = "<group>"; };
 		17B5C55CCD8C84DBE7CACFF6 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		17B5C76EE01B594EDFA21D16 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 		17B5C8080B7BA7B282EE877D /* GithubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubAPI.m; sourceTree = "<group>"; };
 		17B5C89673EB3549FCB04AF8 /* GithubEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubEventType.h; sourceTree = "<group>"; };
 		17B5C958BA87C61DF84CBACE /* OAuthGithub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithub.h; sourceTree = "<group>"; };
 		17B5C9B3C5CF99F7B3A4200A /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
+		17B5CADE32A62AE85CF91E99 /* MessageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellView.m; sourceTree = "<group>"; };
 		17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConfig.h; sourceTree = "<group>"; };
 		17B5CBE3300E4D895E28ED37 /* GHNotificationOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationOwner.m; sourceTree = "<group>"; };
 		17B5CCB822088853BCFADB36 /* GHNotificationBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationBaseClass.h; sourceTree = "<group>"; };
 		17B5CD16A7F31E16EFEEA140 /* GithubEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubEventType.m; sourceTree = "<group>"; };
 		17B5CDE2BFBFB4AF42A0BD13 /* GHNotificationRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationRepository.h; sourceTree = "<group>"; };
+		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
 		7376362D170B179800476F14 /* OAuthWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWindowController.m; sourceTree = "<group>"; };
 		7376362E170B179800476F14 /* OAuthWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthWindowController.xib; sourceTree = "<group>"; };
+		73763631170B243000476F14 /* GithubNotificationTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubNotificationTableView.h; sourceTree = "<group>"; };
+		73763632170B243000476F14 /* GithubNotificationTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubNotificationTableView.m; sourceTree = "<group>"; };
+		73824AFF1733C5D600A0291D /* MessageListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListTableController.h; sourceTree = "<group>"; };
+		73824B001733C5D600A0291D /* MessageListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListTableController.m; sourceTree = "<group>"; };
 		73E5F8CD170B131E00CB7D65 /* GithubReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E5F8D0170B131E00CB7D65 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		73E5F8D3170B131E00CB7D65 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */,
 				73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */,
 				1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */,
 			);
@@ -80,10 +95,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B5C00A80373E08DE4152BC /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CADE32A62AE85CF91E99 /* MessageCellView.m */,
+				17B5C27B8B6A20AEC66B233E /* MessageCellView.h */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
 		17B5C13496E93A8842C3369C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				17B5C82AB5AAA2880472DD12 /* OAuth */,
+				17B5C85023366EF9A106B179 /* MainWindow */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,11 +159,23 @@
 			path = OAuth;
 			sourceTree = "<group>";
 		};
+		17B5C85023366EF9A106B179 /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C0664821702648A2E9DC /* MenuController.m */,
+				17B5C76EE01B594EDFA21D16 /* MenuController.h */,
+				73824AFF1733C5D600A0291D /* MessageListTableController.h */,
+				73824B001733C5D600A0291D /* MessageListTableController.m */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
 		17B5C8951F9DDC4519034757 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				17B5C453CE8EC0BF7C5E673C /* Models */,
 				17B5C13496E93A8842C3369C /* Controllers */,
+				17B5CFA984385B2011A55971 /* Views */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -168,6 +205,16 @@
 				17B5C13D12E08089E1B13A99 /* Github */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		17B5CFA984385B2011A55971 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73763631170B243000476F14 /* GithubNotificationTableView.h */,
+				73763632170B243000476F14 /* GithubNotificationTableView.m */,
+				17B5C00A80373E08DE4152BC /* MessageCell */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		17B5CFF832DC61EF1ED5EDA6 /* OAuth */ = {
@@ -200,6 +247,7 @@
 		73E5F8CF170B131E00CB7D65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7364246D1733E77D002D5AFD /* WebKit.framework */,
 				73E5F8D0170B131E00CB7D65 /* Cocoa.framework */,
 				73E5F8D2170B131E00CB7D65 /* Other Frameworks */,
 				10D691F810CC4663AA86AB71 /* libPods.a */,
@@ -338,6 +386,10 @@
 				17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */,
 				17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */,
 				7376362F170B179800476F14 /* OAuthWindowController.m in Sources */,
+				73763633170B243000476F14 /* GithubNotificationTableView.m in Sources */,
+				17B5C3304465BADF6C07D01E /* MenuController.m in Sources */,
+				73824B011733C5D600A0291D /* MessageListTableController.m in Sources */,
+				17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

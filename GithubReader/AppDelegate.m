@@ -41,14 +41,13 @@
     NSDictionary *userInfo = [notification userInfo];
     BOOL status = [userInfo[@"status"] boolValue];
     if (status) {
-        NSLog(@"Success");
-    }else{
-
+        NSLog(@"OAuth Success");
+    } else {
+        NSLog(@"OAuth Failure");
     }
     [[NSApplication sharedApplication] stopModal];
 }
 
-// QuickWebView://open/?url=http://eow.alc.co.jp/search?q={query}
 - (void)handleURLEvent:(NSAppleEventDescriptor *) event withReplyEvent:(NSAppleEventDescriptor *) replyEvent {
     NSString *urlString = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
     NSURL *url = [NSURL URLWithString:urlString];
