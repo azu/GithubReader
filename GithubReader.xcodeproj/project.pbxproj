@@ -60,6 +60,7 @@
 		17B5CC386E6DA5C718581080 /* GHRepoComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepoComments.h; sourceTree = "<group>"; };
 		17B5CC72C147C4B9BD7BED8E /* GHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUser.m; sourceTree = "<group>"; };
 		17B5CCB822088853BCFADB36 /* GHNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotification.h; sourceTree = "<group>"; };
+		17B5CCEC4B1C84284D55ED97 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
 		17B5CD16A7F31E16EFEEA140 /* GithubEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubEventType.m; sourceTree = "<group>"; };
 		17B5CDE2BFBFB4AF42A0BD13 /* GHNotificationRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationRepository.h; sourceTree = "<group>"; };
 		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -254,6 +255,7 @@
 				73E5F8CF170B131E00CB7D65 /* Frameworks */,
 				73E5F8CE170B131E00CB7D65 /* Products */,
 				92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */,
+				17B5CCEC4B1C84284D55ED97 /* readme.md */,
 			);
 			sourceTree = "<group>";
 		};

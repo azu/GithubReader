@@ -1,0 +1,13 @@
+PODS:
+  - AFNetworking (1.2.0)
+  - Funcussion (0.1.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Funcussion
+
+SPEC CHECKSUMS:
+  AFNetworking: 3cbae45f61a9f995cdbd56bd571223910d7f4e44
+  Funcussion: f8383c7db59d37a4f6c75e787e6e41e1b0d2a792
+
+COCOAPODS: 0.19.1
