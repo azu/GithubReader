@@ -76,5 +76,4 @@
     [[OAuthGithub sharedObject] oauthWithCode:[queries objectForKey:@"code"] state:[queries objectForKey:@"state"]];
 }
 
-
 @end

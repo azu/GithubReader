@@ -1,61 +1,68 @@
 //
-//  MessageListTableController.m
-//  GithubReader
+// Created by azu on 2013/05/04.
 //
-//  Created by azu on 2013/05/03.
-//  Copyright (c) 2013年 azu. All rights reserved.
-//
+
 
 #import "MessageListTableController.h"
+#import "MessageListTableView.h"
 #import "MessageCellView.h"
-#import "GithubAPI.h"
+#import "MessageListDataController.h"
 #import "GHNotification.h"
-#import "NSArray+Funcussion.h"
 #import "GHNotificationSubject.h"
-#import "GHRepoComments.h"
+
 
 @interface MessageListTableController ()
-@property(nonatomic, strong) NSArray *dateSource;
+@property(nonatomic, strong) MessageListDataController *dataController;
 @end
 
-@implementation MessageListTableController
-- (id)init {
-    self = [super init];
+@implementation MessageListTableController {
+
+}
+- (id)initWithCoder:(NSCoder *) coder {
+    self = [super initWithCoder:coder];
     if (self == nil) {
         return nil;
     }
 
-    [self reloadDataSource];
+    self.dataController = [[MessageListDataController alloc] init];
+    self.tableView.dataController = self.dataController;
+    [self.dataController reloadDataSource];
+    [self.dataController addObserver:self forKeyPath:@"dataList" options:NSKeyValueObservingOptionNew context:nil];
+    [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
     return self;
 }
 
-- (void)windowDidLoad {
-    [super windowDidLoad];
-    [self reloadDataSource];
+- (void)setTableView:(MessageListTableView *) tableView {
+    _tableView = tableView;
+    _tableView.dataController = self.dataController;
 }
 
-- (void)reloadDataSource {
-    __weak typeof (self) that = self;
-    [GithubAPI getAPI:@"/notifications" parameters:@{
-        @"all" : @YES
-    } success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSArray *JSONResponse = JSON;
-        that.dateSource = [JSONResponse mapWithIndex:^id(id obj, NSUInteger idx) {
-            return [GHNotification modelObjectWithDictionary:obj];
-        }];
-        [that.tableView reloadData];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
-        NSLog(@"error = %@", error);
-    }];
+- (void)dealloc {
+    [self.dataController removeObserver:self forKeyPath:@"dataList"];
+}
+
+- (void)observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change
+                       context:(void *) context {
+    if ([keyPath isEqualToString:@"dataList"]) {
+        [self.tableView reloadData];
+    } else if ([keyPath isEqualToString:@"selectedIndex"]) {
+        [self loadWebViewFormCurrentData];
+    }
+}
+
+- (void)loadWebViewFormCurrentData {
+    GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
+    [self.tableView loadToWebFormGHNotification:notification];
 }
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *) tableView {
-    return [self.dateSource count];
+    NSUInteger countInList = [self.dataController countInList];
+    return countInList;
 }
 
 - (void)updateCell:(MessageCellView *) cell atColumn:(NSTableColumn *) tableColumn row:(NSInteger) row {
-    GHNotification *notificationBaseClass = [self.dateSource objectAtIndex:(NSUInteger)row];
+    GHNotification *notificationBaseClass = [self.dataController objectInListAtIndex:(NSUInteger)row];
     cell.titleTextField.stringValue = notificationBaseClass.subject.title;
 }
 
@@ -65,25 +72,9 @@
     return customView;
 }
 
-- (void)tableView:(NSTableView *) tableView setObjectValue:(id) object forTableColumn:(NSTableColumn *) tableColumn
-              row:(NSInteger) row {
-    GHNotification *notificationBaseClass = [self.dateSource objectAtIndex:(NSUInteger)row];
-}
-
 - (BOOL)tableView:(NSTableView *) tableView shouldSelectRow:(NSInteger) row {
-
-    GHNotification *notificationBaseClass = [self.dateSource objectAtIndex:(NSUInteger)row];
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [GithubAPI getAPI:notificationBaseClass.subject.latestCommentUrl parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
-        [notificationCenter postNotificationName:@"AZWebViewLoad" object:nil userInfo:@{
-            @"URL" : repoComments.htmlUrl
-        }];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
-        NSLog(@"error = %@", error);
-    }];
+    [self.dataController setSelectedIndex:(NSUInteger)row];
     return YES;
 }
-
 
 @end

@@ -1,15 +1,18 @@
 //
-//  MessageListTableController.h
-//  GithubReader
-//
-//  Created by azu on 2013/05/03.
-//  Copyright (c) 2013年 azu. All rights reserved.
+// Created by azu on 2013/05/04.
 //
 
-#import <Cocoa/Cocoa.h>
 
-@interface MessageListTableController : NSWindowController<NSTableViewDataSource,NSTableViewDelegate>
+#import <Foundation/Foundation.h>
 
-@property (weak, nonatomic) IBOutlet NSTableView *tableView;
+@class MessageListTableView;
+@class GHNotification;
+@class MessageListDataController;
+
+
+@interface MessageListTableController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+
+
+@property(weak, nonatomic) IBOutlet MessageListTableView *tableView;
 
 @end
