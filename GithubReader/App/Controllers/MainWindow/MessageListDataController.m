@@ -15,10 +15,6 @@
 @implementation MessageListDataController {
 
 }
-- (void)setSelectedIndex:(NSUInteger) selectedIndex {
-    NSLog(@"selectedIndex = %lu", selectedIndex);
-    _selectedIndex = selectedIndex;
-}
 
 - (NSUInteger)countInList {
     return [self.dataList count];

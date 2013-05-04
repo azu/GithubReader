@@ -39,18 +39,38 @@
         case 'j':
             [self moveToNextRow];
             break;
+        case 'k':
+            [self moveToPrevRow];
+            break;
         default:
             [super keyDown:theEvent];
             break;
     }
 }
 
+- (void)moveToPrevRow {
+    NSInteger selectedRow = [self selectedRow];
+    if (selectedRow <= 0) {
+        return;
+    }
+    NSUInteger prevRow = (NSUInteger)selectedRow - 1;
+    [self moveToRow:prevRow];
+}
+
 - (void)moveToNextRow {
-    NSUInteger nextRow = (NSUInteger)[self selectedRow] + 1;
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:nextRow];
+    NSInteger selectedRow = [self selectedRow];
+    if (selectedRow >= [self numberOfRows] - 1) {
+        return;
+    }
+    NSUInteger nextRow = (NSUInteger)selectedRow + 1;
+    [self moveToRow:nextRow];
+}
+
+- (void)moveToRow:(NSUInteger) newRow {
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:newRow];
     [self selectRowIndexes:indexSet byExtendingSelection:NO];
-    [self scrollRowToVisible:nextRow];
-    self.dataController.selectedIndex = nextRow;
+    [self scrollRowToVisible:newRow];
+    self.dataController.selectedIndex = newRow;
 }
 
 @end
