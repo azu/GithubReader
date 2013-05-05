@@ -106,7 +106,7 @@
     NSUInteger lastFetchIndex = MAX([self.dataController countInList], currentIndex + numberOfFetch);
     for (NSInteger i = 0; i < numberOfFetch; i++) {
         NSUInteger targetIndex = nextIndex + i;
-        if (targetIndex > lastFetchIndex) {
+        if (targetIndex >= lastFetchIndex) {
             return;
         }
         GHNotification *notification = [self.dataController objectInListAtIndex:targetIndex];
