@@ -23,7 +23,7 @@
 		17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
 		17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2911879E10E106C4965 /* OAuthGithub.m */; };
 		17B5CD8CB62F9174CE32E6F4 /* MessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6B8963DD07B1073182C /* MessageListTableController.m */; };
-		17B5CE65D03FAB0FB1835440 /* NotificationConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C610BA1DBF5968FADE1E /* NotificationConstant.m */; };
+		17B5CE65D03FAB0FB1835440 /* NotificationChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */; };
 		17B5CED1E0E561E9EC971614 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4360B5B602D46C9CC58 /* GHNotificationSubject.m */; };
 		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
 		7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364246D1733E77D002D5AFD /* WebKit.framework */; };
@@ -56,7 +56,7 @@
 		17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConfig.m; sourceTree = "<group>"; };
 		17B5C5DE173FEF3014D8DDCB /* GHNotificationRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationRepository.h; sourceTree = "<group>"; };
 		17B5C5E3423E3314AC6B5B71 /* GHNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotification.m; sourceTree = "<group>"; };
-		17B5C610BA1DBF5968FADE1E /* NotificationConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationConstant.m; sourceTree = "<group>"; };
+		17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationChannel.m; sourceTree = "<group>"; };
 		17B5C6988448026C8C7EA67B /* MainSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSplitView.m; sourceTree = "<group>"; };
 		17B5C6B8963DD07B1073182C /* MessageListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListTableController.m; sourceTree = "<group>"; };
 		17B5C76EE01B594EDFA21D16 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		17B5CC9198E0F5162E46CDE4 /* GHNotificationSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationSubject.h; sourceTree = "<group>"; };
 		17B5CCEC4B1C84284D55ED97 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
 		17B5CD1FC86CC0F1A521EA11 /* GHRepoComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRepoComments.m; sourceTree = "<group>"; };
-		17B5CDCD1950AD3EBBC4C9C5 /* NotificationConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationConstant.h; sourceTree = "<group>"; };
+		17B5CDCD1950AD3EBBC4C9C5 /* NotificationChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationChannel.h; sourceTree = "<group>"; };
 		17B5CE1336EF785DCE828937 /* MessageListDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListDataController.h; sourceTree = "<group>"; };
 		17B5CE6FFFA258272713CDFB /* MessageListDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListDataController.m; sourceTree = "<group>"; };
 		17B5CEB4FBAD8923C5399E6F /* GHNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotification.h; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 		17B5C08CF407F303262CA230 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				17B5C610BA1DBF5968FADE1E /* NotificationConstant.m */,
-				17B5CDCD1950AD3EBBC4C9C5 /* NotificationConstant.h */,
+				17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */,
+				17B5CDCD1950AD3EBBC4C9C5 /* NotificationChannel.h */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				17B5C3304465BADF6C07D01E /* MenuController.m in Sources */,
 				17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */,
 				17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */,
-				17B5CE65D03FAB0FB1835440 /* NotificationConstant.m in Sources */,
+				17B5CE65D03FAB0FB1835440 /* NotificationChannel.m in Sources */,
 				17B5C54153D67927A8141321 /* MessageListDataController.m in Sources */,
 				17B5CD8CB62F9174CE32E6F4 /* MessageListTableController.m in Sources */,
 				17B5C0283DDF11A49C913E13 /* GHNotificationOwner.m in Sources */,

@@ -16,5 +16,10 @@ extern const struct MessageListAttributes {
 
 
 
-@interface NotificationConstant : NSObject
+@interface NotificationChannel : NSObject
+
+
++ (void)addObserver:(id) observer name:(NSString *) name selector:(SEL) selector object:(NSString *) object;
+
++ (void)postName:(NSString *) name object:(NSString *) object userInfo:(NSDictionary *) userInfo;
 @end

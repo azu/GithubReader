@@ -4,7 +4,7 @@
 
 
 #import "MainSplitView.h"
-#import "NotificationConstant.h"
+#import "NotificationChannel.h"
 
 
 @implementation MainSplitView {

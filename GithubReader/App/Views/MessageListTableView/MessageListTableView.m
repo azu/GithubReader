@@ -9,7 +9,7 @@
 #import "GHRepoComments.h"
 #import "GHNotificationSubject.h"
 #import "MessageListDataController.h"
-#import "NotificationConstant.h"
+#import "NotificationChannel.h"
 
 
 @interface MessageListTableView ()
@@ -24,10 +24,9 @@
 
 
 - (void)loadToWebFormGHNotification:(GHNotification *) ghNotification {
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [GithubAPI getAPI:ghNotification.subject.latestCommentUrl parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
-        [notificationCenter postNotificationName:AppNotificationAttributes.WebViewLoad object:nil userInfo:@{
+        [NotificationChannel postName:AppNotificationAttributes.WebViewLoad object:nil userInfo:@{
             @"URL" : repoComments.htmlUrl
         }];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
@@ -40,6 +39,7 @@
 }
 
 - (void)keyDown:(NSEvent *) theEvent {
+    [super keyDown:theEvent];
     [[NSNotificationCenter defaultCenter] postNotificationName:MessageListAttributes.keyEvent object:nil userInfo:@{
         @"theEvent" : theEvent
     }];

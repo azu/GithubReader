@@ -9,4 +9,5 @@
 
 
 @interface MenuController : NSObject
+- (IBAction)handleReloadButton:(id) sender;
 @end

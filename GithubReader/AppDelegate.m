@@ -11,7 +11,7 @@
 #import "OAuthConfig.h"
 #import "OAuthGithub.h"
 #import "OAuthWindowController.h"
-#import "NotificationConstant.h"
+#import "NotificationChannel.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong) OAuthWindowController *oAuthWindowController;

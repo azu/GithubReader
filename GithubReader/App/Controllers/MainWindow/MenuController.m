@@ -14,6 +14,10 @@
 @implementation MenuController {
 
 }
+- (IBAction)handleReloadButton:(id) sender {
+
+}
+
 - (IBAction)handleLoginButton:(id) sender {
     if (self.oAuthWindowController == nil) {
         self.oAuthWindowController = [[OAuthWindowController alloc] init];

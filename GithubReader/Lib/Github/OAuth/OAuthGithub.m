@@ -5,7 +5,7 @@
 #import "OAuthGithub.h"
 #import "OAuthGithubKeys.h"
 #import "OAuthConfig.h"
-#import "NotificationConstant.h"
+#import "NotificationChannel.h"
 #import <AFNetworking/AFNetworking.h>
 
 @implementation OAuthGithub

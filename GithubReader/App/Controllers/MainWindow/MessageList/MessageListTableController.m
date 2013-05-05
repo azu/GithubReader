@@ -9,7 +9,7 @@
 #import "MessageListDataController.h"
 #import "GHNotification.h"
 #import "GHNotificationSubject.h"
-#import "NotificationConstant.h"
+#import "NotificationChannel.h"
 #import "GHNotificationRepository.h"
 
 
@@ -33,7 +33,7 @@
     [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
 
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self selector:@selector(reloadMessageList) name:MessageListAttributes.reload object:nil];
+    [NotificationChannel addObserver:self name:MessageListAttributes.reload selector:@selector(reloadMessageList) object:nil];
     [notificationCenter addObserver:self selector:@selector(handleKeyEvent:) name:MessageListAttributes.keyEvent object:nil];
 
     return self;
@@ -41,7 +41,20 @@
 
 - (void)handleKeyEvent:(NSNotification *) notification {
     NSEvent *theEvent = [notification userInfo][@"theEvent"];
+    // リピートは無視する
+    if ([theEvent isARepeat]) {
+        return;
+    }
     unichar unicodeKey = [[theEvent characters] characterAtIndex:0];
+    if (theEvent.modifierFlags & NSCommandKeyMask) {
+        switch (unicodeKey) {
+            case 'r':
+                [self reloadMessageList];
+                break;
+            default:
+                break;
+        }
+    }
     switch (unicodeKey) {
         case 'j':
             [self.tableView moveToNextRow];
@@ -55,6 +68,7 @@
 }
 
 - (void)reloadMessageList {
+    NSLog(@"%s", sel_getName(_cmd));
     [self.dataController reloadDataSource];
 }
 
