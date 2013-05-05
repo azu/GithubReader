@@ -26,6 +26,7 @@
 
 - (void)reloadDataSource {
     __weak typeof (self) that = self;
+    [[GithubAPI sharedClient].operationQueue cancelAllOperations];
     [GithubAPI getAPI:@"/notifications" parameters:@{
         @"all" : @YES
     } success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
