@@ -20,30 +20,10 @@
 
 }
 
-
-
-
-- (void)loadToWebFormGHNotification:(GHNotification *) ghNotification {
-    [GithubAPI getAPI:ghNotification.subject.latestCommentUrl parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
-        [NotificationChannel postName:AppNotificationAttributes.WebViewLoad object:nil userInfo:@{
-            @"URL" : repoComments.htmlUrl
-        }];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
-        NSLog(@"error = %@", error);
-    }];
-}
-
 - (BOOL)acceptsFirstResponder {
-    return YES;
+    return NO;// TODO: alternative...
 }
 
-- (void)keyDown:(NSEvent *) theEvent {
-    [super keyDown:theEvent];
-    [[NSNotificationCenter defaultCenter] postNotificationName:MessageListAttributes.keyEvent object:nil userInfo:@{
-        @"theEvent" : theEvent
-    }];
-}
 
 - (void)moveToPrevRow {
     NSInteger selectedRow = [self selectedRow];

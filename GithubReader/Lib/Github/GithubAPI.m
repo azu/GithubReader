@@ -5,7 +5,6 @@
 
 #import <AFNetworking/AFHTTPRequestOperation.h>
 #import "GithubAPI.h"
-#import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
 #import "OAuthConfig.h"
 
@@ -17,21 +16,22 @@
 
 #pragma mark - Singleton methods
 
-static GithubAPI *sharedManager_ = nil;
+static GithubAPI *_sharedManager = nil;
 
 + (GithubAPI *)sharedClient {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSURL *baseURL = [NSURL URLWithString:@"https://api.github.com/"];
         GithubAPI *client = [[GithubAPI alloc] initWithBaseURL:baseURL];
-        sharedManager_ = client;
+        _sharedManager = client;
     });
-    return sharedManager_;
+    return _sharedManager;
 }
 
 - (id)copyWithZone:(NSZone *) zone {
     return self;
 }
+
 + (void)getAPI:(NSString *) endPointPath parameters:(NSDictionary *) parameters
        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)) success
        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)) failure {

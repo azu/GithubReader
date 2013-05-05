@@ -13,8 +13,6 @@
 
 @property(nonatomic, strong) MessageListDataController *dataController;
 
-- (void)loadToWebFormGHNotification:(GHNotification *) ghNotification;
-
 - (void)moveToPrevRow;
 
 - (void)moveToNextRow;
