@@ -19,6 +19,12 @@ const struct OAuthAttributes OAuthAttributes = {
     .accessToken = @"OAuthAttributes.accessToken",
 };
 
+
++ (BOOL)hasAccessToken {
+    NSString *accessToken = [self accessToken];
+    return accessToken != nil && accessToken.length > 0;
+}
+
 + (NSString *)accessToken {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     return [defaults objectForKey:OAuthAttributes.accessToken];

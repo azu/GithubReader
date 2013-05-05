@@ -8,6 +8,8 @@
 
 @interface OAuthConfig : NSObject
 
++ (BOOL)hasAccessToken;
+
 + (NSString *)accessToken;
 
 + (void)setAccessToken:(NSString *) accessToken;

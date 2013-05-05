@@ -9,6 +9,7 @@
 #import "MessageListDataController.h"
 #import "GHNotification.h"
 #import "GHNotificationSubject.h"
+#import "NotificationConstant.h"
 
 
 @interface MessageListTableController ()
@@ -29,7 +30,14 @@
     [self.dataController reloadDataSource];
     [self.dataController addObserver:self forKeyPath:@"dataList" options:NSKeyValueObservingOptionNew context:nil];
     [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadMessageList) name:MessageListAttributes.reload object:nil];
+
     return self;
+}
+
+- (void)reloadMessageList {
+    [self.dataController reloadDataSource];
 }
 
 - (void)setTableView:(MessageListTableView *) tableView {

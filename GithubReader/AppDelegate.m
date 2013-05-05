@@ -11,6 +11,11 @@
 #import "OAuthConfig.h"
 #import "OAuthGithub.h"
 #import "OAuthWindowController.h"
+#import "NotificationConstant.h"
+
+@interface AppDelegate ()
+@property(nonatomic, strong) OAuthWindowController *oAuthWindowController;
+@end
 
 @implementation AppDelegate
 
@@ -18,14 +23,17 @@
 }
 
 - (void)launchOAuthView {
-    OAuthWindowController *oAuthWindowController = [[OAuthWindowController alloc] init];
-    [[NSApplication sharedApplication] runModalForWindow:[oAuthWindowController window]];
+
+    if (self.oAuthWindowController == nil) {
+        self.oAuthWindowController = [[OAuthWindowController alloc] init];
+    }
+    [self.oAuthWindowController showWindow:self];
 
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *) aNotification {
     // Insert code here to initialize your application
-    if ([OAuthConfig accessToken].length > 0) {
+    if ([OAuthConfig hasAccessToken]) {
         [self launchMainView];
     } else {
         [self launchOAuthView];
@@ -34,8 +42,8 @@
 
 - (void)awakeFromNib {
     [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(handleURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthAuthentication:) name:@"OAuthAuthentication" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleWebViewLoad:) name:@"AZWebViewLoad" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthAuthentication:) name:AppNotificationAttributes.OAuth object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleWebViewLoad:) name:AppNotificationAttributes.WebViewLoad object:nil];
 
 }
 
@@ -53,7 +61,9 @@
     } else {
         NSLog(@"OAuth Failure");
     }
-    [[NSApplication sharedApplication] stopModal];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:MessageListAttributes.reload object:nil];
+    [self.oAuthWindowController close];
 }
 
 - (void)handleURLEvent:(NSAppleEventDescriptor *) event withReplyEvent:(NSAppleEventDescriptor *) replyEvent {

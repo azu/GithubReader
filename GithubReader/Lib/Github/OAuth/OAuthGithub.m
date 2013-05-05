@@ -5,6 +5,7 @@
 #import "OAuthGithub.h"
 #import "OAuthGithubKeys.h"
 #import "OAuthConfig.h"
+#import "NotificationConstant.h"
 #import <AFNetworking/AFNetworking.h>
 
 @implementation OAuthGithub
@@ -32,7 +33,7 @@
 
     if (![state isEqualToString:self.state]) {
         NSLog(@"state is not match : %@ == %@", state, self.state);
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"OAuthAuthentication" object:nil userInfo:@{
+        [[NSNotificationCenter defaultCenter] postNotificationName:AppNotificationAttributes.OAuth object:nil userInfo:@{
             @"status" : @NO
         }];
         return;
@@ -59,13 +60,13 @@
         }
         NSString *access_token = [queries objectForKey:@"access_token"];
         [OAuthConfig setAccessToken:access_token];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"OAuthAuthentication" object:nil userInfo:@{
+        [[NSNotificationCenter defaultCenter] postNotificationName:AppNotificationAttributes.OAuth object:nil userInfo:@{
             @"status" : @YES
         }];
 
     } failure:^(AFHTTPRequestOperation *localOperation, NSError *error) {
         NSLog(@"error");
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"OAuthAuthentication" object:nil userInfo:@{
+        [[NSNotificationCenter defaultCenter] postNotificationName:AppNotificationAttributes.OAuth object:nil userInfo:@{
             @"status" : @NO
         }];
 

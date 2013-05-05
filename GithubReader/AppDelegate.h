@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class WebView;
+@class OAuthWindowController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
