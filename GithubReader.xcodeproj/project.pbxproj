@@ -16,6 +16,7 @@
 		17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CADE32A62AE85CF91E99 /* MessageCellView.m */; };
 		17B5C54153D67927A8141321 /* MessageListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE6FFFA258272713CDFB /* MessageListDataController.m */; };
 		17B5C7A4A5B922F163D7C36A /* OAuthGithubKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */; };
+		17B5CA055B31781693639852 /* MainSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6988448026C8C7EA67B /* MainSplitView.m */; };
 		17B5CB69D60DFE0318F807E5 /* GithubEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C83289358A4E6519FEF7 /* GithubEventType.m */; };
 		17B5CBB83459E1DB8F85FFDE /* GHRepoComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CD1FC86CC0F1A521EA11 /* GHRepoComments.m */; };
 		17B5CCACF30951F4C845DF6C /* GHNotificationRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2EA0580D11E8F8694E5 /* GHNotificationRepository.m */; };
@@ -56,11 +57,13 @@
 		17B5C5DE173FEF3014D8DDCB /* GHNotificationRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationRepository.h; sourceTree = "<group>"; };
 		17B5C5E3423E3314AC6B5B71 /* GHNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotification.m; sourceTree = "<group>"; };
 		17B5C610BA1DBF5968FADE1E /* NotificationConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationConstant.m; sourceTree = "<group>"; };
+		17B5C6988448026C8C7EA67B /* MainSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSplitView.m; sourceTree = "<group>"; };
 		17B5C6B8963DD07B1073182C /* MessageListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListTableController.m; sourceTree = "<group>"; };
 		17B5C76EE01B594EDFA21D16 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 		17B5C78184CD5CF81C5559ED /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		17B5C8080B7BA7B282EE877D /* GithubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubAPI.m; sourceTree = "<group>"; };
 		17B5C83289358A4E6519FEF7 /* GithubEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubEventType.m; sourceTree = "<group>"; };
+		17B5C86102D1593CB9E603CB /* MainSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSplitView.h; sourceTree = "<group>"; };
 		17B5C91EFE4DE01CD523866A /* GithubEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubEventType.h; sourceTree = "<group>"; };
 		17B5C958BA87C61DF84CBACE /* OAuthGithub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithub.h; sourceTree = "<group>"; };
 		17B5CADE32A62AE85CF91E99 /* MessageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellView.m; sourceTree = "<group>"; };
@@ -224,6 +227,15 @@
 			path = Comments;
 			sourceTree = "<group>";
 		};
+		17B5CCC5F4A92645573BC04D /* MainSplitView */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C6988448026C8C7EA67B /* MainSplitView.m */,
+				17B5C86102D1593CB9E603CB /* MainSplitView.h */,
+			);
+			path = MainSplitView;
+			sourceTree = "<group>";
+		};
 		17B5CCD7B9D83BD160F3E1FA /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +275,7 @@
 			children = (
 				17B5C00A80373E08DE4152BC /* MessageListCell */,
 				17B5C0CB68C9AD28885ABB1E /* MessageListTableView */,
+				17B5CCC5F4A92645573BC04D /* MainSplitView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,6 +469,7 @@
 				17B5CB69D60DFE0318F807E5 /* GithubEventType.m in Sources */,
 				17B5C3956E08EED923DF9F26 /* GHUser.m in Sources */,
 				17B5CBB83459E1DB8F85FFDE /* GHRepoComments.m in Sources */,
+				17B5CA055B31781693639852 /* MainSplitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

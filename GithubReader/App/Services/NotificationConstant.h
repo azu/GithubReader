@@ -11,6 +11,7 @@ extern const struct AppNotificationAttributes {
 } AppNotificationAttributes;
 extern const struct MessageListAttributes {
     __unsafe_unretained NSString *reload;
+    __unsafe_unretained NSString *keyEvent;
 } MessageListAttributes;
 
 

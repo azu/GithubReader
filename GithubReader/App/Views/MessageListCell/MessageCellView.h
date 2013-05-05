@@ -10,4 +10,6 @@
 
 @property (weak, nonatomic) IBOutlet NSTextField *titleTextField;
 
+@property (weak, nonatomic) IBOutlet NSTextField *subjectTextField;
+
 @end

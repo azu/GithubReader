@@ -10,6 +10,7 @@
 #import "GHNotification.h"
 #import "GHNotificationSubject.h"
 #import "NotificationConstant.h"
+#import "GHNotificationRepository.h"
 
 
 @interface MessageListTableController ()
@@ -31,9 +32,26 @@
     [self.dataController addObserver:self forKeyPath:@"dataList" options:NSKeyValueObservingOptionNew context:nil];
     [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadMessageList) name:MessageListAttributes.reload object:nil];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(reloadMessageList) name:MessageListAttributes.reload object:nil];
+    [notificationCenter addObserver:self selector:@selector(handleKeyEvent:) name:MessageListAttributes.keyEvent object:nil];
 
     return self;
+}
+
+- (void)handleKeyEvent:(NSNotification *) notification {
+    NSEvent *theEvent = [notification userInfo][@"theEvent"];
+    unichar unicodeKey = [[theEvent characters] characterAtIndex:0];
+    switch (unicodeKey) {
+        case 'j':
+            [self.tableView moveToNextRow];
+            break;
+        case 'k':
+            [self.tableView moveToPrevRow];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)reloadMessageList {
@@ -69,9 +87,20 @@
     return countInList;
 }
 
+- (void)tableView:(NSTableView *) tableView willDisplayCell:(id) cell forTableColumn:(NSTableColumn *) tableColumn
+              row:(NSInteger) row {
+}
+
+
 - (void)updateCell:(MessageCellView *) cell atColumn:(NSTableColumn *) tableColumn row:(NSInteger) row {
     GHNotification *notificationBaseClass = [self.dataController objectInListAtIndex:(NSUInteger)row];
-    cell.titleTextField.stringValue = notificationBaseClass.subject.title;
+    cell.titleTextField.stringValue = notificationBaseClass.repository.fullName;
+    cell.toolTip = notificationBaseClass.repository.repositoryDescription;
+    cell.subjectTextField.stringValue = notificationBaseClass.subject.title;
+    if (row % 2 == 0) {
+        cell.layer.backgroundColor = [NSColor colorWithCalibratedRed:251 / 255.0 green:251 / 255.0 blue:251 / 255.0 alpha:1.0].CGColor;
+    }
+
 }
 
 - (NSView *)tableView:(NSTableView *) tableView viewForTableColumn:(NSTableColumn *) tableColumn row:(NSInteger) row {

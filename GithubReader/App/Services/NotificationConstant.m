@@ -13,7 +13,8 @@ const struct AppNotificationAttributes AppNotificationAttributes = {
 
 
 const struct MessageListAttributes MessageListAttributes = {
-    .reload = @"MessageList.reload"
+    .reload = @"MessageList.reload",
+    .keyEvent = @"MessageList.keyEvent"
 };
 
 @implementation NotificationConstant {

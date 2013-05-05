@@ -12,14 +12,16 @@
 #import "NotificationConstant.h"
 
 
+@interface MessageListTableView ()
+
+@end
+
 @implementation MessageListTableView {
 
 }
 
 
-- (BOOL)acceptsFirstResponder {
-    return YES;
-}
+
 
 - (void)loadToWebFormGHNotification:(GHNotification *) ghNotification {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -33,20 +35,14 @@
     }];
 }
 
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
 
 - (void)keyDown:(NSEvent *) theEvent {
-    unichar unicodeKey = [[theEvent characters] characterAtIndex:0];
-    switch (unicodeKey) {
-        case 'j':
-            [self moveToNextRow];
-            break;
-        case 'k':
-            [self moveToPrevRow];
-            break;
-        default:
-            [super keyDown:theEvent];
-            break;
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:MessageListAttributes.keyEvent object:nil userInfo:@{
+        @"theEvent" : theEvent
+    }];
 }
 
 - (void)moveToPrevRow {

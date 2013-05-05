@@ -44,13 +44,13 @@
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
             self.commitId = [self objectOrNilForKey:@"commit_id" fromDictionary:dict];
-            self.position = [[dict objectForKey:@"position"] doubleValue];
+            self.position = [dict objectForKey:@"position"] != nil ?: [[dict objectForKey:@"position"] doubleValue];
             self.path = [self objectOrNilForKey:@"path" fromDictionary:dict];
-            self.internalBaseClassIdentifier = [[dict objectForKey:@"id"] doubleValue];
+            self.internalBaseClassIdentifier = [dict objectForKey:@"id"] != nil ?: [[dict objectForKey:@"id"] doubleValue];
             self.htmlUrl = [self objectOrNilForKey:@"html_url" fromDictionary:dict];
             self.createdAt = [self objectOrNilForKey:@"created_at" fromDictionary:dict];
             self.url = [self objectOrNilForKey:@"url" fromDictionary:dict];
-            self.line = [[dict objectForKey:@"line"] doubleValue];
+            self.line = [dict objectForKey:@"line"] != nil ?: [[dict objectForKey:@"line"] doubleValue];
             self.body = [self objectOrNilForKey:@"body" fromDictionary:dict];
             self.updatedAt = [self objectOrNilForKey:@"updated_at" fromDictionary:dict];
             self.user = [GHUser modelObjectWithDictionary:[dict objectForKey:@"user"]];
