@@ -87,19 +87,14 @@
     return countInList;
 }
 
-- (void)tableView:(NSTableView *) tableView willDisplayCell:(id) cell forTableColumn:(NSTableColumn *) tableColumn
-              row:(NSInteger) row {
-}
-
 
 - (void)updateCell:(MessageCellView *) cell atColumn:(NSTableColumn *) tableColumn row:(NSInteger) row {
     GHNotification *notificationBaseClass = [self.dataController objectInListAtIndex:(NSUInteger)row];
     cell.titleTextField.stringValue = notificationBaseClass.repository.fullName;
     cell.toolTip = notificationBaseClass.repository.repositoryDescription;
     cell.subjectTextField.stringValue = notificationBaseClass.subject.title;
-    if (row % 2 == 0) {
-        cell.layer.backgroundColor = [NSColor colorWithCalibratedRed:251 / 255.0 green:251 / 255.0 blue:251 / 255.0 alpha:1.0].CGColor;
-    }
+    cell.layer.borderWidth = 1.0f;
+    cell.layer.borderColor = [NSColor grayColor].CGColor;
 
 }
 

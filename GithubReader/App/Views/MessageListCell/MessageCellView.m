@@ -4,6 +4,7 @@
 
 
 #import "MessageCellView.h"
+#import "TUINSView.h"
 
 
 @implementation MessageCellView {
