@@ -13,6 +13,25 @@
 @implementation GithubAPI {
 
 }
+
+
+#pragma mark - Singleton methods
+
+static GithubAPI *sharedManager_ = nil;
+
++ (GithubAPI *)sharedClient {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURL *baseURL = [NSURL URLWithString:@"https://api.github.com/"];
+        GithubAPI *client = [[GithubAPI alloc] initWithBaseURL:baseURL];
+        sharedManager_ = client;
+    });
+    return sharedManager_;
+}
+
+- (id)copyWithZone:(NSZone *) zone {
+    return self;
+}
 + (void)getAPI:(NSString *) endPointPath parameters:(NSDictionary *) parameters
        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)) success
        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)) failure {
@@ -32,11 +51,9 @@
         NSLog(@"Please Login Github.");
         return;
     }
-    NSURL *baseURL = [NSURL URLWithString:@"https://api.github.com/"];
-    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     NSString *accessTokenFiled = [NSString stringWithFormat:@"token %@", [OAuthConfig accessToken]];
-    [client setDefaultHeader:@"Authorization" value:accessTokenFiled];
-    NSMutableURLRequest *request = [client requestWithMethod:method path:endPointPath parameters:parameters];
+    [[self sharedClient] setDefaultHeader:@"Authorization" value:accessTokenFiled];
+    NSMutableURLRequest *request = [[self sharedClient] requestWithMethod:method path:endPointPath parameters:parameters];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:success failure:failure];
     [operation start];
 }
