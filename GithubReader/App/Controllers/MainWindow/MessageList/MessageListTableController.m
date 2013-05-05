@@ -11,6 +11,7 @@
 #import "GHNotificationSubject.h"
 #import "NotificationChannel.h"
 #import "GHNotificationRepository.h"
+#import "FetchAPI.h"
 
 
 @interface MessageListTableController ()
@@ -20,6 +21,7 @@
 @implementation MessageListTableController {
 
 }
+
 - (id)initWithCoder:(NSCoder *) coder {
     self = [super initWithCoder:coder];
     if (self == nil) {
@@ -68,7 +70,6 @@
 }
 
 - (void)reloadMessageList {
-    NSLog(@"%s", sel_getName(_cmd));
     [self.dataController reloadDataSource];
 }
 
@@ -90,10 +91,35 @@
     }
 }
 
+- (FetchAPI *)fetchAPIModel {
+    if (_fetchAPIModel == nil) {
+        _fetchAPIModel = [[FetchAPI alloc] init];
+    }
+    return _fetchAPIModel;
+}
+
+// resolve forward notification
+- (void)preLoadData {
+    NSInteger numberOfFetch = 1;
+    NSUInteger currentIndex = self.dataController.selectedIndex;
+    NSUInteger nextIndex = currentIndex + 1;
+    NSUInteger lastFetchIndex = MAX([self.dataController countInList], currentIndex + numberOfFetch);
+    for (NSInteger i = 0; i < numberOfFetch; i++) {
+        NSUInteger targetIndex = nextIndex + i;
+        if (targetIndex > lastFetchIndex) {
+            return;
+        }
+        GHNotification *notification = [self.dataController objectInListAtIndex:targetIndex];
+        [self.fetchAPIModel fetchFromGHNotification:notification];
+    }
+}
+
 - (void)loadWebViewFormCurrentData {
     GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
-    [self.tableView loadToWebFormGHNotification:notification];
+    [self preLoadData];
+    [self.fetchAPIModel loadToWebFromGHNotification:notification];
 }
+
 #pragma mark - NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *) tableView {

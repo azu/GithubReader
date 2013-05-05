@@ -8,6 +8,7 @@
 @class MessageListTableView;
 @class GHNotification;
 @class MessageListDataController;
+@class FetchAPI;
 
 
 @interface MessageListTableController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
@@ -15,4 +16,5 @@
 
 @property(weak, nonatomic) IBOutlet MessageListTableView *tableView;
 
+@property(nonatomic, strong) FetchAPI *fetchAPIModel;
 @end
