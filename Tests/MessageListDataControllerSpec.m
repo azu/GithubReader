@@ -7,6 +7,7 @@
 
 #import "Kiwi.h"
 #import "MessageListDataController.h"
+#import "GHNotification.h"
 
 @interface MessageListDataControllerSpec : KWSpec
 
@@ -29,7 +30,10 @@
             });
             context(@"has not old data", ^{
                 beforeEach(^{
-                    dataController.dataList = @[@"a", @"b", @"c", @"d", @"e"];
+                    dataController.dataList = @[
+                        [self GHNotificationWithID:@"a"],
+                        [self GHNotificationWithID:@"b"]
+                    ];
                 });
                 it(@"return diff content", ^{
                     NSArray *result = [dataController diffData];
@@ -37,12 +41,20 @@
                 });
             });
             context(@"has both data", ^{
+                GHNotification *newNotification = [self GHNotificationWithID:@"c"];
                 beforeEach(^{
-                    dataController.dataList = @[@"a", @"b", @"c", @"d", @"e"];
-                    dataController.old_dataList = @[@"a", @"b", @"c"];
+                    dataController.dataList = @[
+                        [self GHNotificationWithID:@"a"],
+                        [self GHNotificationWithID:@"b"],
+                        newNotification
+                    ];
+                    dataController.old_dataList = @[
+                        [self GHNotificationWithID:@"a"],
+                        [self GHNotificationWithID:@"b"],
+                    ];
                 });
                 it(@"return diff content", ^{
-                    NSArray *expectDiff = @[@"d", @"e"];
+                    NSArray *expectDiff = @[newNotification];
                     NSArray *result = [dataController diffData];
                     [[result should] equal:expectDiff];
                 });
@@ -51,4 +63,10 @@
     });
 }
 
++ (GHNotification *)GHNotificationWithID:(NSString *)identifier{
+    GHNotification *ghNotification = [[GHNotification alloc] init];
+    ghNotification.internalBaseClassIdentifier = identifier;
+
+    return ghNotification;
+}
 @end

@@ -58,15 +58,16 @@
 
 - (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.reason forKey:@"reason"];
-    [mutableDict setValue:[NSNumber numberWithBool:self.unread] forKey:@"unread"];
-    [mutableDict setValue:self.internalBaseClassIdentifier forKey:@"id"];
-    [mutableDict setValue:[self.repository dictionaryRepresentation] forKey:@"repository"];
-    [mutableDict setValue:self.subscriptionUrl forKey:@"subscription_url"];
-    [mutableDict setValue:[self.subject dictionaryRepresentation] forKey:@"subject"];
-    [mutableDict setValue:self.lastReadAt forKey:@"last_read_at"];
-    [mutableDict setValue:self.updatedAt forKey:@"updated_at"];
-    [mutableDict setValue:self.url forKey:@"url"];
+
+    [self setObjectOrNil:self.reason forKey:@"reason" fromDictionary:mutableDict];
+    [self setObjectOrNil:[NSNumber numberWithBool:self.unread] forKey:@"unread" fromDictionary:mutableDict];
+    [self setObjectOrNil:self.internalBaseClassIdentifier forKey:@"id" fromDictionary:mutableDict];
+    [self setObjectOrNil:[self.repository dictionaryRepresentation] forKey:@"repository" fromDictionary:mutableDict];
+    [self setObjectOrNil:self.subscriptionUrl forKey:@"subscription_url" fromDictionary:mutableDict];
+    [self setObjectOrNil:[self.subject dictionaryRepresentation] forKey:@"subject" fromDictionary:mutableDict];
+    [self setObjectOrNil:self.lastReadAt forKey:@"last_read_at" fromDictionary:mutableDict];
+    [self setObjectOrNil:self.updatedAt forKey:@"updated_at" fromDictionary:mutableDict];
+    [self setObjectOrNil:self.url forKey:@"url" fromDictionary:mutableDict];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -81,6 +82,12 @@
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
+- (void)setObjectOrNil:(id) value forKey:(NSString *) aKey fromDictionary:(NSMutableDictionary *) dict {
+    if (value == nil) {
+        return;
+    }
+    [dict setValue:value forKey:aKey];
+}
 
 #pragma mark - NSCoding Methods
 

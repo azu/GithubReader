@@ -17,7 +17,7 @@
 @property (nonatomic, strong) GHNotificationRepository *repository;
 @property (nonatomic, strong) NSString *subscriptionUrl;
 @property (nonatomic, strong) GHNotificationSubject *subject;
-@property (nonatomic, assign) id lastReadAt;
+@property (nonatomic, strong) NSString *lastReadAt;
 @property (nonatomic, strong) NSString *updatedAt;
 @property (nonatomic, strong) NSString *url;
 

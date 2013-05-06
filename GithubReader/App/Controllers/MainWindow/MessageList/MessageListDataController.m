@@ -25,8 +25,8 @@
 }
 
 - (void)reloadDataSource {
-    self.old_dataList = [self.dataList copy];
     __weak typeof (self) that = self;
+    self.old_dataList = [self.dataList copy];
     [[GithubAPI sharedClient].operationQueue cancelAllOperations];
     [GithubAPI getAPI:@"/notifications" parameters:@{
         @"all" : @YES
@@ -44,10 +44,16 @@
     if (self.dataList == nil || [self.dataList count] == 0 || self.old_dataList == nil || [self.old_dataList count] == 0) {
         return nil;
     }
-    NSMutableOrderedSet *allSet = [NSMutableOrderedSet orderedSetWithArray:self.dataList];
-    NSMutableOrderedSet *duplicateSet = [NSMutableOrderedSet orderedSetWithArray:self.old_dataList];
-    [allSet minusOrderedSet:duplicateSet];
-    return [allSet array];
+
+    // idの集合
+    NSArray *oldIDs = [self.old_dataList valueForKeyPath:@"internalBaseClassIdentifier"];
+    NSArray *results = [self.dataList filter:^BOOL(GHNotification *ghNotification) {
+        if ([oldIDs containsObject:ghNotification.internalBaseClassIdentifier]) {
+            return NO;
+        }
+        return YES;
+    }];
+    return results;
 }
 
 @end
