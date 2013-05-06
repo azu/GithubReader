@@ -3,8 +3,11 @@
 //
 
 
+#import <MASPreferences/MASPreferencesWindowController.h>
 #import "MenuController.h"
 #import "OAuthWindowController.h"
+#import "MASPreferencesWindowController.h"
+#import "GeneralPreferencesViewController.h"
 
 
 @interface MenuController ()
@@ -12,7 +15,7 @@
 @end
 
 @implementation MenuController {
-
+    MASPreferencesWindowController *_preferencesWindow;
 }
 - (IBAction)handleReloadButton:(id) sender {
 
@@ -25,4 +28,13 @@
     [self.oAuthWindowController showWindow:self];
 }
 
+- (IBAction)displayPreferences:(id) sender {
+    if (self.preferencesWindow == nil) {
+        NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:[NSBundle mainBundle]];
+        NSArray *views = @[generalViewController];
+        NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
+        self.preferencesWindow = [[MASPreferencesWindowController alloc] initWithViewControllers:views title:title];
+    }
+    [self.preferencesWindow showWindow:self];
+}
 @end

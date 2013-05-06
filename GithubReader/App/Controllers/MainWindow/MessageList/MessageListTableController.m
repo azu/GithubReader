@@ -16,15 +16,15 @@
 #import "GrowlConst.h"
 #import "NSArray+Funcussion.h"
 #import "GrowlDelegate.h"
+#import "GeneralPref.h"
 
 
 @interface MessageListTableController ()
 @property(nonatomic, strong) MessageListDataController *dataController;
+@property(nonatomic, strong) NSTimer *refreshTimer;
 @end
 
-@implementation MessageListTableController {
-
-}
+@implementation MessageListTableController
 
 - (id)initWithCoder:(NSCoder *) coder {
     self = [super initWithCoder:coder];
@@ -38,6 +38,8 @@
     [self.dataController addObserver:self forKeyPath:@"dataList" options:NSKeyValueObservingOptionNew context:nil];
     [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
 
+    // 繰り返しを設定
+    [self.refreshTimer fire];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [NotificationChannel addObserver:self name:MessageListAttributes.reload selector:@selector(reloadMessageList) object:nil];
     [notificationCenter addObserver:self selector:@selector(handleKeyEvent:) name:MessageListAttributes.keyEvent object:nil];
@@ -88,6 +90,14 @@
     }
 }
 
+- (NSTimer *)refreshTimer {
+    if (_refreshTimer == nil) {
+        NSInteger minute = [[GeneralPref refreshInterval] integerValue];
+        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:60 * minute target:self selector:@selector(reloadMessageList) userInfo:nil repeats:YES];
+    }
+    return _refreshTimer;
+}
+
 - (void)reloadMessageList {
     [self.dataController reloadDataSource];
 }
@@ -99,6 +109,7 @@
 
 - (void)dealloc {
     [self.dataController removeObserver:self forKeyPath:@"dataList"];
+    [self.refreshTimer invalidate];
 }
 
 - (void)observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change

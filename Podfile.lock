@@ -2,15 +2,18 @@ PODS:
   - AFNetworking (1.2.0)
   - Funcussion (0.1.1)
   - Kiwi (2.0.6)
+  - MASPreferences (1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Funcussion
   - Kiwi
+  - MASPreferences
 
 SPEC CHECKSUMS:
   AFNetworking: 3cbae45f61a9f995cdbd56bd571223910d7f4e44
   Funcussion: f8383c7db59d37a4f6c75e787e6e41e1b0d2a792
   Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
+  MASPreferences: b8c112b4b6e6cbd32b8f49d249eb152d1eeb38f8
 
 COCOAPODS: 0.19.1

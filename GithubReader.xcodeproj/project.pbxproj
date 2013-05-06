@@ -11,12 +11,13 @@
 		17B5C131A3F1ABCD063690C6 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9FB018855696C5F69F6 /* GHNotificationOwner.m */; };
 		17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C12CACF29C37192EA7FE /* MessageListTableView.m */; };
 		17B5C162E972E7929CB9A6E8 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */; };
+		17B5C179420E1A00044C421B /* GeneralPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9D399649D6DDF49C446 /* GeneralPref.m */; };
 		17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */; };
 		17B5C27A7F270CED0B786FF7 /* GHNotificationSubject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5C34E2045510F52CFAB29 /* GHNotificationSubject.h */; };
+		17B5C3175A0D13CDA4BAAEF0 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C79BA9AC1FCBD1548D03 /* GeneralPreferencesViewController.xib */; };
 		17B5C3304465BADF6C07D01E /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0664821702648A2E9DC /* MenuController.m */; };
 		17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
 		17B5C43DBFE5F512B10E4616 /* MessageListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE6FFFA258272713CDFB /* MessageListDataController.m */; };
-		17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CADE32A62AE85CF91E99 /* MessageCellView.m */; };
 		17B5C4BE95C710B43A0C98DB /* GHNotificationRepository.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5C84AFE82F50653084690 /* GHNotificationRepository.h */; };
 		17B5C54153D67927A8141321 /* MessageListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE6FFFA258272713CDFB /* MessageListDataController.m */; };
 		17B5C61B237BFFF563D79217 /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
@@ -27,13 +28,17 @@
 		17B5C850BDCE1E6E21D8A807 /* GithubEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C265E40C3ED58BF4B602 /* GithubEventType.m */; };
 		17B5C9038D5CD796507A8D1D /* GHNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C25432488566B954A641 /* GHNotification.m */; };
 		17B5C95C7CA9810253ABC675 /* GHNotificationRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C13DCE3C721585D33655 /* GHNotificationRepository.m */; };
+		17B5C986033B4878F459F880 /* GeneralPreferencesViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5CE8DB6F96C24BD599882 /* GeneralPreferencesViewController.h */; };
+		17B5C9A300246E2129DFCF5E /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8D61CC2A501C0CB16A7 /* MessageCellView.m */; };
 		17B5C9D4CD483922EC403974 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
 		17B5CA055B31781693639852 /* MainSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6988448026C8C7EA67B /* MainSplitView.m */; };
 		17B5CB1C29375B38FDC16726 /* GHRepoComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2F679FFD923A85E0F57 /* GHRepoComments.m */; };
 		17B5CB5DBA3447544A87B8FD /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */; };
 		17B5CB5E619EF353EDA25B27 /* GHNotificationOwner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5C83B6F78803637BC2A2E /* GHNotificationOwner.h */; };
 		17B5CBDAAB5FC3F5587AB041 /* FetchAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CBC7B4E75C98CED09230 /* FetchAPI.m */; };
+		17B5CC2E01E390B7EA8172F1 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C37BC3E8A97B3BDA77CE /* GeneralPreferencesViewController.m */; };
 		17B5CC443A0B94E93AF3C743 /* GHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C42B37FBA0FA7FFEF508 /* GHUser.m */; };
+		17B5CC9DD3E8E605975735DD /* GeneralPref.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5C62FFCFF3E3AB0FDB2CA /* GeneralPref.h */; };
 		17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
 		17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2911879E10E106C4965 /* OAuthGithub.m */; };
 		17B5CD5E674B07FBD3440A5A /* GHNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C25432488566B954A641 /* GHNotification.m */; };
@@ -69,6 +74,8 @@
 				17B5CB5E619EF353EDA25B27 /* GHNotificationOwner.h in CopyFiles */,
 				17B5C4BE95C710B43A0C98DB /* GHNotificationRepository.h in CopyFiles */,
 				17B5C27A7F270CED0B786FF7 /* GHNotificationSubject.h in CopyFiles */,
+				17B5C986033B4878F459F880 /* GeneralPreferencesViewController.h in CopyFiles */,
+				17B5CC9DD3E8E605975735DD /* GeneralPref.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +85,13 @@
 		10D691F810CC4663AA86AB71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B5C0664821702648A2E9DC /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
 		17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithubKeys.h; sourceTree = "<group>"; };
+		17B5C0983F58AC67E02C812D /* MessageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCellView.h; sourceTree = "<group>"; };
 		17B5C12CACF29C37192EA7FE /* MessageListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListTableView.m; sourceTree = "<group>"; };
 		17B5C13DCE3C721585D33655 /* GHNotificationRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationRepository.m; sourceTree = "<group>"; };
 		17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.growlRegDict; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		17B5C1F9ECC621792C79B8B5 /* GithubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubAPI.h; sourceTree = "<group>"; };
 		17B5C25432488566B954A641 /* GHNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotification.m; sourceTree = "<group>"; };
 		17B5C265E40C3ED58BF4B602 /* GithubEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubEventType.m; sourceTree = "<group>"; };
-		17B5C27B8B6A20AEC66B233E /* MessageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCellView.h; sourceTree = "<group>"; };
 		17B5C2911879E10E106C4965 /* OAuthGithub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithub.m; sourceTree = "<group>"; };
 		17B5C2C3E7E39FDBD93A8FCA /* MessageListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListTableController.h; sourceTree = "<group>"; };
 		17B5C2E0B1870B4B1172E672 /* MessageListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListTableView.h; sourceTree = "<group>"; };
@@ -92,25 +99,29 @@
 		17B5C31FA1F3A6812C6FF5C7 /* GrowlConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlConst.h; sourceTree = "<group>"; };
 		17B5C34E2045510F52CFAB29 /* GHNotificationSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationSubject.h; sourceTree = "<group>"; };
 		17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithubKeys.m; sourceTree = "<group>"; };
+		17B5C37BC3E8A97B3BDA77CE /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
 		17B5C3901C78A1B509A50307 /* GHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUser.h; sourceTree = "<group>"; };
 		17B5C42B37FBA0FA7FFEF508 /* GHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUser.m; sourceTree = "<group>"; };
 		17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConfig.m; sourceTree = "<group>"; };
 		17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationChannel.m; sourceTree = "<group>"; };
+		17B5C62FFCFF3E3AB0FDB2CA /* GeneralPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPref.h; sourceTree = "<group>"; };
 		17B5C63D588A6332D206291B /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		17B5C6988448026C8C7EA67B /* MainSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSplitView.m; sourceTree = "<group>"; };
 		17B5C6B8963DD07B1073182C /* MessageListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListTableController.m; sourceTree = "<group>"; };
 		17B5C76EE01B594EDFA21D16 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		17B5C79BA9AC1FCBD1548D03 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
 		17B5C8080B7BA7B282EE877D /* GithubAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubAPI.m; sourceTree = "<group>"; };
 		17B5C82B66D40A349131E67C /* GHNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotification.h; sourceTree = "<group>"; };
 		17B5C83B6F78803637BC2A2E /* GHNotificationOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationOwner.h; sourceTree = "<group>"; };
 		17B5C84AFE82F50653084690 /* GHNotificationRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationRepository.h; sourceTree = "<group>"; };
 		17B5C86102D1593CB9E603CB /* MainSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSplitView.h; sourceTree = "<group>"; };
+		17B5C8D61CC2A501C0CB16A7 /* MessageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellView.m; sourceTree = "<group>"; };
 		17B5C90C22A8DD45FB933CEC /* MessageListDataControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListDataControllerSpec.m; sourceTree = "<group>"; };
 		17B5C958BA87C61DF84CBACE /* OAuthGithub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithub.h; sourceTree = "<group>"; };
+		17B5C9D399649D6DDF49C446 /* GeneralPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPref.m; sourceTree = "<group>"; };
 		17B5C9D4F028C5F8D2364783 /* GrowlConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlConst.m; sourceTree = "<group>"; };
 		17B5C9FB018855696C5F69F6 /* GHNotificationOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationOwner.m; sourceTree = "<group>"; };
 		17B5CA2E4A1C135BBA10C426 /* FetchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAPI.h; sourceTree = "<group>"; };
-		17B5CADE32A62AE85CF91E99 /* MessageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellView.m; sourceTree = "<group>"; };
 		17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConfig.h; sourceTree = "<group>"; };
 		17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlDelegate.h; sourceTree = "<group>"; };
 		17B5CBC7B4E75C98CED09230 /* FetchAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAPI.m; sourceTree = "<group>"; };
@@ -120,6 +131,7 @@
 		17B5CE1336EF785DCE828937 /* MessageListDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListDataController.h; sourceTree = "<group>"; };
 		17B5CE22E98251469EB22A98 /* GHRepoComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepoComments.h; sourceTree = "<group>"; };
 		17B5CE6FFFA258272713CDFB /* MessageListDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListDataController.m; sourceTree = "<group>"; };
+		17B5CE8DB6F96C24BD599882 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlDelegate.m; sourceTree = "<group>"; };
 		17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
 		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -186,13 +198,13 @@
 			path = MessageList;
 			sourceTree = "<group>";
 		};
-		17B5C00A80373E08DE4152BC /* MessageListCell */ = {
+		17B5C0090F49A3F648446C17 /* GeneralPreferrence */ = {
 			isa = PBXGroup;
 			children = (
-				17B5CADE32A62AE85CF91E99 /* MessageCellView.m */,
-				17B5C27B8B6A20AEC66B233E /* MessageCellView.h */,
+				17B5C9D399649D6DDF49C446 /* GeneralPref.m */,
+				17B5C62FFCFF3E3AB0FDB2CA /* GeneralPref.h */,
 			);
-			path = MessageListCell;
+			path = GeneralPreferrence;
 			sourceTree = "<group>";
 		};
 		17B5C0320E2CEB93FD351B6C /* GithubAPIv3Models */ = {
@@ -251,6 +263,16 @@
 			path = Github;
 			sourceTree = "<group>";
 		};
+		17B5C15537D7CB3413F2C5A8 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CE8DB6F96C24BD599882 /* GeneralPreferencesViewController.h */,
+				17B5C37BC3E8A97B3BDA77CE /* GeneralPreferencesViewController.m */,
+				17B5C79BA9AC1FCBD1548D03 /* GeneralPreferencesViewController.xib */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		17B5C5682B87439A239F16A3 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +287,15 @@
 				17B5C13DCE3C721585D33655 /* GHNotificationRepository.m */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		17B5C5A00CE5D6E5384A44F4 /* MessageListCell */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C8D61CC2A501C0CB16A7 /* MessageCellView.m */,
+				17B5C0983F58AC67E02C812D /* MessageCellView.h */,
+			);
+			path = MessageListCell;
 			sourceTree = "<group>";
 		};
 		17B5C82AB5AAA2880472DD12 /* OAuth */ = {
@@ -334,6 +365,7 @@
 				17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */,
 				17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */,
 				17B5CF257E9BEDFE4C5E67AE /* Growl */,
+				17B5C0090F49A3F648446C17 /* GeneralPreferrence */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -361,9 +393,10 @@
 		17B5CFA984385B2011A55971 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				17B5C00A80373E08DE4152BC /* MessageListCell */,
 				17B5C0CB68C9AD28885ABB1E /* MessageListTableView */,
 				17B5CCC5F4A92645573BC04D /* MainSplitView */,
+				17B5C15537D7CB3413F2C5A8 /* Preference */,
+				17B5C5A00CE5D6E5384A44F4 /* MessageListCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -573,6 +606,7 @@
 				73E5F8E7170B131E00CB7D65 /* MainMenu.xib in Resources */,
 				73763630170B179800476F14 /* OAuthWindowController.xib in Resources */,
 				17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */,
+				17B5C3175A0D13CDA4BAAEF0 /* GeneralPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +698,6 @@
 				17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */,
 				7376362F170B179800476F14 /* OAuthWindowController.m in Sources */,
 				17B5C3304465BADF6C07D01E /* MenuController.m in Sources */,
-				17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */,
 				17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */,
 				17B5CE65D03FAB0FB1835440 /* NotificationChannel.m in Sources */,
 				17B5C54153D67927A8141321 /* MessageListDataController.m in Sources */,
@@ -680,6 +713,9 @@
 				17B5CB5DBA3447544A87B8FD /* GHNotificationSubject.m in Sources */,
 				17B5C6E22D06182A55BA1A2C /* GHNotificationOwner.m in Sources */,
 				17B5C95C7CA9810253ABC675 /* GHNotificationRepository.m in Sources */,
+				17B5C9A300246E2129DFCF5E /* MessageCellView.m in Sources */,
+				17B5CC2E01E390B7EA8172F1 /* GeneralPreferencesViewController.m in Sources */,
+				17B5C179420E1A00044C421B /* GeneralPref.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
