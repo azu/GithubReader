@@ -10,6 +10,8 @@
 
 @interface MessageListDataController : NSObject
 @property(nonatomic, strong) NSArray *dataList;
+@property(nonatomic, strong) NSArray *old_dataList;
+
 @property(nonatomic) NSUInteger selectedIndex;
 
 - (NSUInteger)countInList;
@@ -17,4 +19,6 @@
 - (GHNotification *)objectInListAtIndex:(NSUInteger) theIndex;
 
 - (void)reloadDataSource;
+
+- (NSArray *)diffData;
 @end

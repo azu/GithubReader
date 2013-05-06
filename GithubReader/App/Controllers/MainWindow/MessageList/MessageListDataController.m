@@ -25,6 +25,7 @@
 }
 
 - (void)reloadDataSource {
+    self.old_dataList = [self.dataList copy];
     __weak typeof (self) that = self;
     [[GithubAPI sharedClient].operationQueue cancelAllOperations];
     [GithubAPI getAPI:@"/notifications" parameters:@{
@@ -39,5 +40,14 @@
     }];
 }
 
+- (NSArray *)diffData {
+    if (self.dataList == nil || self.old_dataList == nil) {
+        return nil;
+    }
+    NSMutableOrderedSet *allSet = [NSMutableOrderedSet orderedSetWithArray:self.dataList];
+    NSMutableOrderedSet *duplicateSet = [NSMutableOrderedSet orderedSetWithArray:self.old_dataList];
+    [allSet minusOrderedSet:duplicateSet];
+    return [allSet array];
+}
 
 @end

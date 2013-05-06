@@ -10,16 +10,22 @@
 		17B5C01C095FB710D630D05D /* GrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */; };
 		17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C12CACF29C37192EA7FE /* MessageListTableView.m */; };
 		17B5C140394D9F258FA60BDB /* GrowlDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */; };
+		17B5C26DB86709090DED286F /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE2C719BACEF31E1E97C /* GHNotificationOwner.m */; };
 		17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */; };
 		17B5C3304465BADF6C07D01E /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0664821702648A2E9DC /* MenuController.m */; };
 		17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
+		17B5C43DBFE5F512B10E4616 /* MessageListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE6FFFA258272713CDFB /* MessageListDataController.m */; };
 		17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CADE32A62AE85CF91E99 /* MessageCellView.m */; };
+		17B5C524EC2638C261B333A0 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C3A3C05A36411AAC6FA1 /* GHNotificationSubject.m */; };
 		17B5C54153D67927A8141321 /* MessageListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE6FFFA258272713CDFB /* MessageListDataController.m */; };
+		17B5C61B237BFFF563D79217 /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
 		17B5C621B4AF3A5AE6F07919 /* GrowlConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9D4F028C5F8D2364783 /* GrowlConst.m */; };
+		17B5C622E21BC6E68490F8F2 /* GHNotificationRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CD5611BE8F3293040299 /* GHNotificationRepository.m */; };
 		17B5C73B9EB815800ACF8043 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE2C719BACEF31E1E97C /* GHNotificationOwner.m */; };
 		17B5C7A4A5B922F163D7C36A /* OAuthGithubKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */; };
 		17B5C850BDCE1E6E21D8A807 /* GithubEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C265E40C3ED58BF4B602 /* GithubEventType.m */; };
 		17B5C9038D5CD796507A8D1D /* GHNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C25432488566B954A641 /* GHNotification.m */; };
+		17B5C9D4CD483922EC403974 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
 		17B5CA055B31781693639852 /* MainSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6988448026C8C7EA67B /* MainSplitView.m */; };
 		17B5CAEC7B07E5C8762E7427 /* GHNotificationRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CD5611BE8F3293040299 /* GHNotificationRepository.m */; };
 		17B5CB1C29375B38FDC16726 /* GHRepoComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2F679FFD923A85E0F57 /* GHRepoComments.m */; };
@@ -27,13 +33,18 @@
 		17B5CC443A0B94E93AF3C743 /* GHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C42B37FBA0FA7FFEF508 /* GHUser.m */; };
 		17B5CD005D518F929DECC021 /* GithubAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C8080B7BA7B282EE877D /* GithubAPI.m */; };
 		17B5CD1BB5EB487DCB275C10 /* OAuthGithub.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2911879E10E106C4965 /* OAuthGithub.m */; };
+		17B5CD5E674B07FBD3440A5A /* GHNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C25432488566B954A641 /* GHNotification.m */; };
 		17B5CD8CB62F9174CE32E6F4 /* MessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6B8963DD07B1073182C /* MessageListTableController.m */; };
 		17B5CDB32002FF4F663E9D98 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C3A3C05A36411AAC6FA1 /* GHNotificationSubject.m */; };
 		17B5CE65D03FAB0FB1835440 /* NotificationChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */; };
+		17B5CEE3FF4EB189D658C838 /* MessageListDataControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C90C22A8DD45FB933CEC /* MessageListDataControllerSpec.m */; };
 		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
 		7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364246D1733E77D002D5AFD /* WebKit.framework */; };
 		7376362F170B179800476F14 /* OAuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376362D170B179800476F14 /* OAuthWindowController.m */; };
 		73763630170B179800476F14 /* OAuthWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7376362E170B179800476F14 /* OAuthWindowController.xib */; };
+		73CAA5AA173747900095EC99 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CAA5A9173747900095EC99 /* SenTestingKit.framework */; };
+		73CAA5AB173747900095EC99 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E5F8D0170B131E00CB7D65 /* Cocoa.framework */; };
+		73CAA5B1173747900095EC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73CAA5AF173747900095EC99 /* InfoPlist.strings */; };
 		73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E5F8D0170B131E00CB7D65 /* Cocoa.framework */; };
 		73E5F8DB170B131E00CB7D65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8D9170B131E00CB7D65 /* InfoPlist.strings */; };
 		73E5F8DD170B131E00CB7D65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E5F8DC170B131E00CB7D65 /* main.m */; };
@@ -42,6 +53,7 @@
 		73E5F8E7170B131E00CB7D65 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8E5170B131E00CB7D65 /* MainMenu.xib */; };
 		73F60F13173737F2005495F8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F60F12173737F2005495F8 /* Growl.framework */; };
 		73F60F1417373801005495F8 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73F60F12173737F2005495F8 /* Growl.framework */; };
+		7CA21DB8AE494C2BA21D750A /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B941BCECF47F698FDAB40 /* libPods-Tests.a */; settings = {}; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +101,7 @@
 		17B5C82B66D40A349131E67C /* GHNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotification.h; sourceTree = "<group>"; };
 		17B5C86102D1593CB9E603CB /* MainSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSplitView.h; sourceTree = "<group>"; };
 		17B5C8D6FAF9805165815BDB /* GHNotificationOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationOwner.h; sourceTree = "<group>"; };
+		17B5C90C22A8DD45FB933CEC /* MessageListDataControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListDataControllerSpec.m; sourceTree = "<group>"; };
 		17B5C958BA87C61DF84CBACE /* OAuthGithub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithub.h; sourceTree = "<group>"; };
 		17B5C9D4F028C5F8D2364783 /* GrowlConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlConst.m; sourceTree = "<group>"; };
 		17B5CA2E4A1C135BBA10C426 /* FetchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAPI.h; sourceTree = "<group>"; };
@@ -109,6 +122,11 @@
 		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
 		7376362D170B179800476F14 /* OAuthWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWindowController.m; sourceTree = "<group>"; };
 		7376362E170B179800476F14 /* OAuthWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthWindowController.xib; sourceTree = "<group>"; };
+		73CAA5A8173747900095EC99 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73CAA5A9173747900095EC99 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		73CAA5AE173747900095EC99 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		73CAA5B0173747900095EC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73CAA5B5173747900095EC99 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		73E5F8CD170B131E00CB7D65 /* GithubReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E5F8D0170B131E00CB7D65 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		73E5F8D3170B131E00CB7D65 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -124,9 +142,21 @@
 		73E5F8E6170B131E00CB7D65 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		73F60F12173737F2005495F8 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D90B941BCECF47F698FDAB40 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Tests.a"; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EC68F05C8B4C45BA3085DB /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		73CAA5A4173747900095EC99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73CAA5AA173747900095EC99 /* SenTestingKit.framework in Frameworks */,
+				73CAA5AB173747900095EC99 /* Cocoa.framework in Frameworks */,
+				7CA21DB8AE494C2BA21D750A /* libPods-Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73E5F8CA170B131E00CB7D65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,14 +391,35 @@
 			path = OAuth;
 			sourceTree = "<group>";
 		};
+		73CAA5AC173747900095EC99 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				73CAA5AD173747900095EC99 /* Supporting Files */,
+				17B5C90C22A8DD45FB933CEC /* MessageListDataControllerSpec.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		73CAA5AD173747900095EC99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73CAA5AE173747900095EC99 /* Tests-Info.plist */,
+				73CAA5AF173747900095EC99 /* InfoPlist.strings */,
+				73CAA5B5173747900095EC99 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		73E5F8C4170B131E00CB7D65 = {
 			isa = PBXGroup;
 			children = (
 				73E5F8D6170B131E00CB7D65 /* GithubReader */,
+				73CAA5AC173747900095EC99 /* Tests */,
 				73E5F8CF170B131E00CB7D65 /* Frameworks */,
 				73E5F8CE170B131E00CB7D65 /* Products */,
 				92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */,
 				17B5CCEC4B1C84284D55ED97 /* readme.md */,
+				F6EC68F05C8B4C45BA3085DB /* Pods-Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				73E5F8CD170B131E00CB7D65 /* GithubReader.app */,
+				73CAA5A8173747900095EC99 /* Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -386,8 +438,10 @@
 				73F60F12173737F2005495F8 /* Growl.framework */,
 				7364246D1733E77D002D5AFD /* WebKit.framework */,
 				73E5F8D0170B131E00CB7D65 /* Cocoa.framework */,
+				73CAA5A9173747900095EC99 /* SenTestingKit.framework */,
 				73E5F8D2170B131E00CB7D65 /* Other Frameworks */,
 				10D691F810CC4663AA86AB71 /* libPods.a */,
+				D90B941BCECF47F698FDAB40 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -431,6 +485,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		73CAA5A7173747900095EC99 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73CAA5B8173747910095EC99 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				1797938508B640CC897FB14D /* Check Pods Manifest.lock */,
+				73CAA5A3173747900095EC99 /* Sources */,
+				73CAA5A4173747900095EC99 /* Frameworks */,
+				73CAA5A5173747900095EC99 /* Resources */,
+				73CAA5A6173747900095EC99 /* ShellScript */,
+				CCDA99856B5045558B848D10 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 73CAA5A8173747900095EC99 /* Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		73E5F8CC170B131E00CB7D65 /* GithubReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73E5F8EA170B131E00CB7D65 /* Build configuration list for PBXNativeTarget "GithubReader" */;
@@ -469,14 +543,25 @@
 			mainGroup = 73E5F8C4170B131E00CB7D65;
 			productRefGroup = 73E5F8CE170B131E00CB7D65 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				73E5F8CC170B131E00CB7D65 /* GithubReader */,
+				73CAA5A7173747900095EC99 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		73CAA5A5173747900095EC99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73CAA5B1173747900095EC99 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73E5F8CB170B131E00CB7D65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,6 +577,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1797938508B640CC897FB14D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 1;
+		};
 		713B20ABE51444939D9BA8FE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,9 +606,52 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
+		73CAA5A6173747900095EC99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		CCDA99856B5045558B848D10 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 1;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		73CAA5A3173747900095EC99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B5CEE3FF4EB189D658C838 /* MessageListDataControllerSpec.m in Sources */,
+				17B5C43DBFE5F512B10E4616 /* MessageListDataController.m in Sources */,
+				17B5C9D4CD483922EC403974 /* GithubAPI.m in Sources */,
+				17B5CD5E674B07FBD3440A5A /* GHNotification.m in Sources */,
+				17B5C61B237BFFF563D79217 /* OAuthConfig.m in Sources */,
+				17B5C26DB86709090DED286F /* GHNotificationOwner.m in Sources */,
+				17B5C622E21BC6E68490F8F2 /* GHNotificationRepository.m in Sources */,
+				17B5C524EC2638C261B333A0 /* GHNotificationSubject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73E5F8C9170B131E00CB7D65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +686,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		73CAA5AF173747900095EC99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73CAA5B0173747900095EC99 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		73E5F8D9170B131E00CB7D65 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -570,6 +721,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		73CAA5B6173747910095EC99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6EC68F05C8B4C45BA3085DB /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		73CAA5B7173747910095EC99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6EC68F05C8B4C45BA3085DB /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		73E5F8E8170B131E00CB7D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -668,6 +847,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		73CAA5B8173747910095EC99 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73CAA5B6173747910095EC99 /* Debug */,
+				73CAA5B7173747910095EC99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		73E5F8C8170B131E00CB7D65 /* Build configuration list for PBXProject "GithubReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
