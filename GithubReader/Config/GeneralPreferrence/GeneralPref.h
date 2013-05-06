@@ -7,6 +7,7 @@
 
 
 @interface GeneralPref : NSObject
+// Default : 1min
 + (NSNumber *)refreshInterval;
 
 + (void)setRefreshInterval:(NSNumber *) value;
