@@ -45,12 +45,12 @@
     return self;
 }
 
-- (void)someMethod {
-    __weak typeof(self) that = self;
+- (void)notifyDiffContent {
+    __weak typeof (self) that = self;
 
     [GrowlApplicationBridge setGrowlDelegate:[GrowlDelegate new]];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [that.dataController.dataList eachWithIndex:^(GHNotification *notification, NSUInteger index) {
+        [[that.dataController diffData] eachWithIndex:^(GHNotification *notification, NSUInteger index) {
             dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC * index);
             dispatch_after(time, dispatch_get_main_queue(), ^{
                 [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title];
@@ -104,10 +104,15 @@
 - (void)observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change
                        context:(void *) context {
     if ([keyPath isEqualToString:@"dataList"]) {
-        [self.tableView reloadData];
+        [self updateTableView];
     } else if ([keyPath isEqualToString:@"selectedIndex"]) {
         [self loadWebViewFormCurrentData];
     }
+}
+
+- (void)updateTableView {
+    [self.tableView reloadData];
+    [self notifyDiffContent];
 }
 
 - (FetchAPI *)fetchAPIModel {

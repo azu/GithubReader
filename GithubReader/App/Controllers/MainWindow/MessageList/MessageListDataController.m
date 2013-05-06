@@ -41,7 +41,7 @@
 }
 
 - (NSArray *)diffData {
-    if (self.dataList == nil || self.old_dataList == nil) {
+    if (self.dataList == nil || [self.dataList count] == 0 || self.old_dataList == nil || [self.old_dataList count] == 0) {
         return nil;
     }
     NSMutableOrderedSet *allSet = [NSMutableOrderedSet orderedSetWithArray:self.dataList];

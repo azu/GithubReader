@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		17B5C01C095FB710D630D05D /* GrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */; };
 		17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C12CACF29C37192EA7FE /* MessageListTableView.m */; };
-		17B5C140394D9F258FA60BDB /* GrowlDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */; };
 		17B5C26DB86709090DED286F /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE2C719BACEF31E1E97C /* GHNotificationOwner.m */; };
 		17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */; };
 		17B5C3304465BADF6C07D01E /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0664821702648A2E9DC /* MenuController.m */; };
@@ -53,7 +52,7 @@
 		73E5F8E7170B131E00CB7D65 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8E5170B131E00CB7D65 /* MainMenu.xib */; };
 		73F60F13173737F2005495F8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F60F12173737F2005495F8 /* Growl.framework */; };
 		73F60F1417373801005495F8 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73F60F12173737F2005495F8 /* Growl.framework */; };
-		7CA21DB8AE494C2BA21D750A /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B941BCECF47F698FDAB40 /* libPods-Tests.a */; settings = {}; };
+		7CA21DB8AE494C2BA21D750A /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B941BCECF47F698FDAB40 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +63,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				73F60F1417373801005495F8 /* Growl.framework in CopyFiles */,
-				17B5C140394D9F258FA60BDB /* GrowlDelegate.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +140,7 @@
 		73E5F8E6170B131E00CB7D65 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		73F60F12173737F2005495F8 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		D90B941BCECF47F698FDAB40 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Tests.a"; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90B941BCECF47F698FDAB40 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EC68F05C8B4C45BA3085DB /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -543,8 +541,6 @@
 			mainGroup = 73E5F8C4170B131E00CB7D65;
 			productRefGroup = 73E5F8CE170B131E00CB7D65 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				73E5F8CC170B131E00CB7D65 /* GithubReader */,
@@ -590,7 +586,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 1;
 		};
 		713B20ABE51444939D9BA8FE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -632,7 +627,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -854,6 +848,7 @@
 				73CAA5B7173747910095EC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73E5F8C8170B131E00CB7D65 /* Build configuration list for PBXProject "GithubReader" */ = {
 			isa = XCConfigurationList;

@@ -12,7 +12,7 @@
 
 @interface GHNotification ()
 
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
+- (id)objectOrNilForKey:(id) aKey fromDictionary:(NSDictionary *) dict;
 
 @end
 
@@ -29,37 +29,34 @@
 @synthesize url = _url;
 
 
-+ (GHNotification *)modelObjectWithDictionary:(NSDictionary *)dict
-{
++ (GHNotification *)modelObjectWithDictionary:(NSDictionary *) dict {
     GHNotification *instance = [[GHNotification alloc] initWithDictionary:dict];
     return instance;
 }
 
-- (id)initWithDictionary:(NSDictionary *)dict
-{
+- (id)initWithDictionary:(NSDictionary *) dict {
     self = [super init];
-    
+
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
-    if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.reason = [self objectOrNilForKey:@"reason" fromDictionary:dict];
-            self.unread = [[dict objectForKey:@"unread"] boolValue];
-            self.internalBaseClassIdentifier = [self objectOrNilForKey:@"id" fromDictionary:dict];
-            self.repository = [GHNotificationRepository modelObjectWithDictionary:[dict objectForKey:@"repository"]];
-            self.subscriptionUrl = [self objectOrNilForKey:@"subscription_url" fromDictionary:dict];
-            self.subject = [GHNotificationSubject modelObjectWithDictionary:[dict objectForKey:@"subject"]];
-            self.lastReadAt = [self objectOrNilForKey:@"last_read_at" fromDictionary:dict];
-            self.updatedAt = [self objectOrNilForKey:@"updated_at" fromDictionary:dict];
-            self.url = [self objectOrNilForKey:@"url" fromDictionary:dict];
+    if (self && [dict isKindOfClass:[NSDictionary class]]) {
+        self.reason = [self objectOrNilForKey:@"reason" fromDictionary:dict];
+        self.unread = [[dict objectForKey:@"unread"] boolValue];
+        self.internalBaseClassIdentifier = [self objectOrNilForKey:@"id" fromDictionary:dict];
+        self.repository = [GHNotificationRepository modelObjectWithDictionary:[dict objectForKey:@"repository"]];
+        self.subscriptionUrl = [self objectOrNilForKey:@"subscription_url" fromDictionary:dict];
+        self.subject = [GHNotificationSubject modelObjectWithDictionary:[dict objectForKey:@"subject"]];
+        self.lastReadAt = [self objectOrNilForKey:@"last_read_at" fromDictionary:dict];
+        self.updatedAt = [self objectOrNilForKey:@"updated_at" fromDictionary:dict];
+        self.url = [self objectOrNilForKey:@"url" fromDictionary:dict];
 
     }
-    
+
     return self;
-    
+
 }
 
-- (NSDictionary *)dictionaryRepresentation
-{
+- (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.reason forKey:@"reason"];
     [mutableDict setValue:[NSNumber numberWithBool:self.unread] forKey:@"unread"];
@@ -74,14 +71,12 @@
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
 
-- (NSString *)description 
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"%@", [self dictionaryRepresentation]];
 }
 
 #pragma mark - Helper Method
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict
-{
+- (id)objectOrNilForKey:(id) aKey fromDictionary:(NSDictionary *) dict {
     id object = [dict objectForKey:aKey];
     return [object isEqual:[NSNull null]] ? nil : object;
 }
@@ -89,8 +84,7 @@
 
 #pragma mark - NSCoding Methods
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
+- (id)initWithCoder:(NSCoder *) aDecoder {
     self = [super init];
 
     self.reason = [aDecoder decodeObjectForKey:@"reason"];
@@ -105,8 +99,7 @@
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
+- (void)encodeWithCoder:(NSCoder *) aCoder {
 
     [aCoder encodeObject:_reason forKey:@"reason"];
     [aCoder encodeBool:_unread forKey:@"unread"];
