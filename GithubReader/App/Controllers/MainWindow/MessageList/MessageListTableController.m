@@ -17,6 +17,8 @@
 #import "NSArray+Funcussion.h"
 #import "GrowlDelegate.h"
 #import "GeneralPref.h"
+#import "NIKFontAwesomeIconFactory.h"
+#import "NIKFontAwesomeIconFactory+OSX.h"
 
 
 @interface MessageListTableController ()
@@ -170,6 +172,7 @@
     cell.subjectTextField.stringValue = notificationBaseClass.subject.title;
     cell.layer.borderWidth = 1.0f;
     cell.layer.borderColor = [NSColor grayColor].CGColor;
+    [cell setIconType:notificationBaseClass.subject.type];
 
 }
 

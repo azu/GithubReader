@@ -21,7 +21,7 @@ const struct GithubEventTypes githubEventTypes = {
     .PublicEvent = @"public",
     .PullRequestEvent = @"pull_request",
     .PullRequestReviewCommentEvent = @"pull_request_review_comment",
-    .PushEvent =@"push",
+    .PushEvent = @"push",
     .TeamAddEvent = @"team_add",
     .WatchEvent = @"watch"
 };
