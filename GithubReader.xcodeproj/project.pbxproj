@@ -14,6 +14,7 @@
 		17B5C179420E1A00044C421B /* GeneralPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9D399649D6DDF49C446 /* GeneralPref.m */; };
 		17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */; };
 		17B5C27A7F270CED0B786FF7 /* GHNotificationSubject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5C34E2045510F52CFAB29 /* GHNotificationSubject.h */; };
+		17B5C2E5F5C1F1A97822772A /* CustomTitleBar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5CB0E66B0B5964B36AB6B /* CustomTitleBar.h */; };
 		17B5C3175A0D13CDA4BAAEF0 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C79BA9AC1FCBD1548D03 /* GeneralPreferencesViewController.xib */; };
 		17B5C3304465BADF6C07D01E /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0664821702648A2E9DC /* MenuController.m */; };
 		17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
@@ -45,6 +46,7 @@
 		17B5CD8CB62F9174CE32E6F4 /* MessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6B8963DD07B1073182C /* MessageListTableController.m */; };
 		17B5CE65D03FAB0FB1835440 /* NotificationChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */; };
 		17B5CEE3FF4EB189D658C838 /* MessageListDataControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C90C22A8DD45FB933CEC /* MessageListDataControllerSpec.m */; };
+		17B5CF06AC8FBA9EFCBC639D /* CustomTitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CB732FE8D309D4C3BA70 /* CustomTitleBar.m */; };
 		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
 		7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364246D1733E77D002D5AFD /* WebKit.framework */; };
 		7376362F170B179800476F14 /* OAuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376362D170B179800476F14 /* OAuthWindowController.m */; };
@@ -76,6 +78,7 @@
 				17B5C27A7F270CED0B786FF7 /* GHNotificationSubject.h in CopyFiles */,
 				17B5C986033B4878F459F880 /* GeneralPreferencesViewController.h in CopyFiles */,
 				17B5CC9DD3E8E605975735DD /* GeneralPref.h in CopyFiles */,
+				17B5C2E5F5C1F1A97822772A /* CustomTitleBar.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +125,10 @@
 		17B5C9D4F028C5F8D2364783 /* GrowlConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlConst.m; sourceTree = "<group>"; };
 		17B5C9FB018855696C5F69F6 /* GHNotificationOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationOwner.m; sourceTree = "<group>"; };
 		17B5CA2E4A1C135BBA10C426 /* FetchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAPI.h; sourceTree = "<group>"; };
+		17B5CB0E66B0B5964B36AB6B /* CustomTitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTitleBar.h; sourceTree = "<group>"; };
 		17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConfig.h; sourceTree = "<group>"; };
 		17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlDelegate.h; sourceTree = "<group>"; };
+		17B5CB732FE8D309D4C3BA70 /* CustomTitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTitleBar.m; sourceTree = "<group>"; };
 		17B5CBC7B4E75C98CED09230 /* FetchAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAPI.m; sourceTree = "<group>"; };
 		17B5CCEC4B1C84284D55ED97 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
 		17B5CD8082116A286C4FC13E /* GithubEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubEventType.h; sourceTree = "<group>"; };
@@ -308,6 +313,15 @@
 			path = OAuth;
 			sourceTree = "<group>";
 		};
+		17B5C838A5BA3103CC706EA8 /* CustomTitleBar */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CB732FE8D309D4C3BA70 /* CustomTitleBar.m */,
+				17B5CB0E66B0B5964B36AB6B /* CustomTitleBar.h */,
+			);
+			path = CustomTitleBar;
+			sourceTree = "<group>";
+		};
 		17B5C85023366EF9A106B179 /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +411,7 @@
 				17B5CCC5F4A92645573BC04D /* MainSplitView */,
 				17B5C15537D7CB3413F2C5A8 /* Preference */,
 				17B5C5A00CE5D6E5384A44F4 /* MessageListCell */,
+				17B5C838A5BA3103CC706EA8 /* CustomTitleBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -716,6 +731,7 @@
 				17B5C9A300246E2129DFCF5E /* MessageCellView.m in Sources */,
 				17B5CC2E01E390B7EA8172F1 /* GeneralPreferencesViewController.m in Sources */,
 				17B5C179420E1A00044C421B /* GeneralPref.m in Sources */,
+				17B5CF06AC8FBA9EFCBC639D /* CustomTitleBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

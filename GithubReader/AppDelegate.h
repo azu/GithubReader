@@ -10,10 +10,12 @@
 
 @class WebView;
 @class OAuthWindowController;
+@class INAppStoreWindow;
+@class CustomTitleBar;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
-@property (weak) IBOutlet WebView *webView;
+@property(weak) IBOutlet CustomTitleBar *titleCustomBarView;
+@property(weak) IBOutlet INAppStoreWindow *window;
+@property(weak) IBOutlet WebView *webView;
 
 @end

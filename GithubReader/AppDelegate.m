@@ -12,6 +12,8 @@
 #import "OAuthGithub.h"
 #import "OAuthWindowController.h"
 #import "NotificationChannel.h"
+#import "INAppStoreWindow.h"
+#import "CustomTitleBar.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong) OAuthWindowController *oAuthWindowController;
@@ -19,8 +21,6 @@
 
 @implementation AppDelegate
 
-- (void)launchMainView {
-}
 
 - (void)launchOAuthView {
 
@@ -33,14 +33,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *) aNotification {
     // Insert code here to initialize your application
-    if ([OAuthConfig hasAccessToken]) {
-        [self launchMainView];
-    } else {
+    if (![OAuthConfig hasAccessToken]) {
         [self launchOAuthView];
     }
 }
 
 - (void)awakeFromNib {
+    self.window.titleBarHeight = 22.0f;
+    self.window.titleBarView = self.titleCustomBarView;
+
     [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(handleURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthAuthentication:) name:AppNotificationAttributes.OAuth object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleWebViewLoad:) name:AppNotificationAttributes.WebViewLoad object:nil];

@@ -2,6 +2,7 @@ PODS:
   - AFNetworking (1.2.0)
   - FontAwesomeIconFactory (1.0.1)
   - Funcussion (0.1.1)
+  - INAppStoreWindow (1.2)
   - Kiwi (2.0.6)
   - MASPreferences (1.0)
 
@@ -9,6 +10,7 @@ DEPENDENCIES:
   - AFNetworking
   - FontAwesomeIconFactory
   - Funcussion
+  - INAppStoreWindow
   - Kiwi
   - MASPreferences
 
@@ -16,6 +18,7 @@ SPEC CHECKSUMS:
   AFNetworking: 3cbae45f61a9f995cdbd56bd571223910d7f4e44
   FontAwesomeIconFactory: c90ca8ad5e73029e990a0d8bb6db1a618196afcf
   Funcussion: f8383c7db59d37a4f6c75e787e6e41e1b0d2a792
+  INAppStoreWindow: d00327caee47d951043169df9aaab952389defcb
   Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
   MASPreferences: b8c112b4b6e6cbd32b8f49d249eb152d1eeb38f8
 
