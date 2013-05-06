@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17B5C01C095FB710D630D05D /* GrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */; };
 		17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C12CACF29C37192EA7FE /* MessageListTableView.m */; };
+		17B5C140394D9F258FA60BDB /* GrowlDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */; };
+		17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */; };
 		17B5C3304465BADF6C07D01E /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0664821702648A2E9DC /* MenuController.m */; };
 		17B5C33ECEFA24A3AD32560A /* OAuthConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */; };
 		17B5C4AD53E9563AC9C55E10 /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CADE32A62AE85CF91E99 /* MessageCellView.m */; };
 		17B5C54153D67927A8141321 /* MessageListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE6FFFA258272713CDFB /* MessageListDataController.m */; };
+		17B5C621B4AF3A5AE6F07919 /* GrowlConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9D4F028C5F8D2364783 /* GrowlConst.m */; };
 		17B5C73B9EB815800ACF8043 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CE2C719BACEF31E1E97C /* GHNotificationOwner.m */; };
 		17B5C7A4A5B922F163D7C36A /* OAuthGithubKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */; };
 		17B5C850BDCE1E6E21D8A807 /* GithubEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C265E40C3ED58BF4B602 /* GithubEventType.m */; };
@@ -36,7 +40,23 @@
 		73E5F8E1170B131E00CB7D65 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8DF170B131E00CB7D65 /* Credits.rtf */; };
 		73E5F8E4170B131E00CB7D65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E5F8E3170B131E00CB7D65 /* AppDelegate.m */; };
 		73E5F8E7170B131E00CB7D65 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F8E5170B131E00CB7D65 /* MainMenu.xib */; };
+		73F60F13173737F2005495F8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F60F12173737F2005495F8 /* Growl.framework */; };
+		73F60F1417373801005495F8 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73F60F12173737F2005495F8 /* Growl.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73F60F1017373777005495F8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73F60F1417373801005495F8 /* Growl.framework in CopyFiles */,
+				17B5C140394D9F258FA60BDB /* GrowlDelegate.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		10D691F810CC4663AA86AB71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +64,7 @@
 		17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithubKeys.h; sourceTree = "<group>"; };
 		17B5C12CACF29C37192EA7FE /* MessageListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListTableView.m; sourceTree = "<group>"; };
 		17B5C1749D4564572919C4D2 /* GHNotificationSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationSubject.h; sourceTree = "<group>"; };
+		17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.growlRegDict; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		17B5C1F9ECC621792C79B8B5 /* GithubAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubAPI.h; sourceTree = "<group>"; };
 		17B5C25432488566B954A641 /* GHNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotification.m; sourceTree = "<group>"; };
 		17B5C265E40C3ED58BF4B602 /* GithubEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubEventType.m; sourceTree = "<group>"; };
@@ -52,6 +73,7 @@
 		17B5C2C3E7E39FDBD93A8FCA /* MessageListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListTableController.h; sourceTree = "<group>"; };
 		17B5C2E0B1870B4B1172E672 /* MessageListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListTableView.h; sourceTree = "<group>"; };
 		17B5C2F679FFD923A85E0F57 /* GHRepoComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHRepoComments.m; sourceTree = "<group>"; };
+		17B5C31FA1F3A6812C6FF5C7 /* GrowlConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlConst.h; sourceTree = "<group>"; };
 		17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthGithubKeys.m; sourceTree = "<group>"; };
 		17B5C3901C78A1B509A50307 /* GHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUser.h; sourceTree = "<group>"; };
 		17B5C3A3C05A36411AAC6FA1 /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
@@ -68,9 +90,11 @@
 		17B5C86102D1593CB9E603CB /* MainSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSplitView.h; sourceTree = "<group>"; };
 		17B5C8D6FAF9805165815BDB /* GHNotificationOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNotificationOwner.h; sourceTree = "<group>"; };
 		17B5C958BA87C61DF84CBACE /* OAuthGithub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthGithub.h; sourceTree = "<group>"; };
+		17B5C9D4F028C5F8D2364783 /* GrowlConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlConst.m; sourceTree = "<group>"; };
 		17B5CA2E4A1C135BBA10C426 /* FetchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAPI.h; sourceTree = "<group>"; };
 		17B5CADE32A62AE85CF91E99 /* MessageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellView.m; sourceTree = "<group>"; };
 		17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConfig.h; sourceTree = "<group>"; };
+		17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlDelegate.h; sourceTree = "<group>"; };
 		17B5CBC7B4E75C98CED09230 /* FetchAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAPI.m; sourceTree = "<group>"; };
 		17B5CCEC4B1C84284D55ED97 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
 		17B5CD5611BE8F3293040299 /* GHNotificationRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationRepository.m; sourceTree = "<group>"; };
@@ -80,6 +104,7 @@
 		17B5CE22E98251469EB22A98 /* GHRepoComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepoComments.h; sourceTree = "<group>"; };
 		17B5CE2C719BACEF31E1E97C /* GHNotificationOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationOwner.m; sourceTree = "<group>"; };
 		17B5CE6FFFA258272713CDFB /* MessageListDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListDataController.m; sourceTree = "<group>"; };
+		17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlDelegate.m; sourceTree = "<group>"; };
 		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
 		7376362D170B179800476F14 /* OAuthWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWindowController.m; sourceTree = "<group>"; };
@@ -97,6 +122,7 @@
 		73E5F8E2170B131E00CB7D65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		73E5F8E3170B131E00CB7D65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		73E5F8E6170B131E00CB7D65 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		73F60F12173737F2005495F8 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -108,6 +134,7 @@
 				7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */,
 				73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */,
 				1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */,
+				73F60F13173737F2005495F8 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +299,21 @@
 				17B5CAF7015315A86349ED4D /* OAuth */,
 				17B5C073015DE1B91745FF46 /* OAuthGithubKeys.h */,
 				17B5C3683EA4DB1A15D60382 /* OAuthGithubKeys.m */,
+				17B5CF257E9BEDFE4C5E67AE /* Growl */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		17B5CF257E9BEDFE4C5E67AE /* Growl */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */,
+				17B5C9D4F028C5F8D2364783 /* GrowlConst.m */,
+				17B5C31FA1F3A6812C6FF5C7 /* GrowlConst.h */,
+				17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */,
+				17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */,
+			);
+			path = Growl;
 			sourceTree = "<group>";
 		};
 		17B5CF2F070FB2C382626EF4 /* Lib */ = {
@@ -343,6 +383,7 @@
 		73E5F8CF170B131E00CB7D65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73F60F12173737F2005495F8 /* Growl.framework */,
 				7364246D1733E77D002D5AFD /* WebKit.framework */,
 				73E5F8D0170B131E00CB7D65 /* Cocoa.framework */,
 				73E5F8D2170B131E00CB7D65 /* Other Frameworks */,
@@ -398,6 +439,7 @@
 				73E5F8CA170B131E00CB7D65 /* Frameworks */,
 				73E5F8CB170B131E00CB7D65 /* Resources */,
 				713B20ABE51444939D9BA8FE /* Copy Pods Resources */,
+				73F60F1017373777005495F8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -443,6 +485,7 @@
 				73E5F8E1170B131E00CB7D65 /* Credits.rtf in Resources */,
 				73E5F8E7170B131E00CB7D65 /* MainMenu.xib in Resources */,
 				73763630170B179800476F14 /* OAuthWindowController.xib in Resources */,
+				17B5C27A29E9A34E73D4F235 /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +535,8 @@
 				17B5CC443A0B94E93AF3C743 /* GHUser.m in Sources */,
 				17B5CB1C29375B38FDC16726 /* GHRepoComments.m in Sources */,
 				17B5CBDAAB5FC3F5587AB041 /* FetchAPI.m in Sources */,
+				17B5C621B4AF3A5AE6F07919 /* GrowlConst.m in Sources */,
+				17B5C01C095FB710D630D05D /* GrowlDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +634,10 @@
 			baseConfigurationReference = 92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GithubReader/GithubReader-Prefix.pch";
 				INFOPLIST_FILE = "GithubReader/GithubReader-Info.plist";
@@ -603,6 +652,10 @@
 			baseConfigurationReference = 92C0C6F9A42745AB8AD1E077 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GithubReader/GithubReader-Prefix.pch";
 				INFOPLIST_FILE = "GithubReader/GithubReader-Info.plist";

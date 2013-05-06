@@ -3,6 +3,7 @@
 //
 
 
+#import <Growl/Growl.h>
 #import "MessageListTableController.h"
 #import "MessageListTableView.h"
 #import "MessageCellView.h"
@@ -12,6 +13,9 @@
 #import "NotificationChannel.h"
 #import "GHNotificationRepository.h"
 #import "FetchAPI.h"
+#import "GrowlConst.h"
+#import "NSArray+Funcussion.h"
+#import "GrowlDelegate.h"
 
 
 @interface MessageListTableController ()
@@ -39,6 +43,21 @@
     [notificationCenter addObserver:self selector:@selector(handleKeyEvent:) name:MessageListAttributes.keyEvent object:nil];
 
     return self;
+}
+
+- (void)someMethod {
+    __weak typeof(self) that = self;
+
+    [GrowlApplicationBridge setGrowlDelegate:[GrowlDelegate new]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [that.dataController.dataList eachWithIndex:^(GHNotification *notification, NSUInteger index) {
+            dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC * index);
+            dispatch_after(time, dispatch_get_main_queue(), ^{
+                [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title];
+            });
+        }];
+    });
+
 }
 
 - (void)handleKeyEvent:(NSNotification *) notification {
