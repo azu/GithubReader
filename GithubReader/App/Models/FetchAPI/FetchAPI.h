@@ -11,6 +11,8 @@
 @interface FetchAPI : NSObject
 @property(nonatomic, strong) NSMutableDictionary *cacheTable;
 
+- (void)fetchFromGHNotification:(GHNotification *) ghNotification success:(void (^)(NSString *)) success;
+
 - (void)fetchFromGHNotification:(GHNotification *) ghNotification;
 
 - (void)loadToWebFromGHNotification:(GHNotification *) ghNotification;

@@ -17,8 +17,6 @@
 #import "NSArray+Funcussion.h"
 #import "GrowlDelegate.h"
 #import "GeneralPref.h"
-#import "NIKFontAwesomeIconFactory.h"
-#import "NIKFontAwesomeIconFactory+OSX.h"
 
 
 @interface MessageListTableController ()
@@ -87,9 +85,22 @@
         case 'k':
             [self.tableView moveToPrevRow];
             break;
+        case 'o':
+            [self openInBrowser];
+            break;
         default:
             break;
     }
+}
+
+- (void)openInBrowser {
+    GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
+    [self.fetchAPIModel fetchFromGHNotification:notification success:^(NSString *string) {
+        NSURL *url = [NSURL URLWithString:string];
+        NSLog(@"url = %@", url);
+        [[NSWorkspace sharedWorkspace] openURL:url];
+    }];
+
 }
 
 - (NSTimer *)refreshTimer {

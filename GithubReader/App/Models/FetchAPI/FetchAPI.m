@@ -13,19 +13,32 @@
 
 @implementation FetchAPI {
 }
-
-- (void)fetchFromGHNotification:(GHNotification *) ghNotification {
+- (void)fetchFromGHNotification:(GHNotification *) ghNotification
+                        success:(void (^)(NSString *htmlURL)) success {
     NSString *latestCommentURL = ghNotification.subject.latestCommentUrl;
-    NSLog(@"latestCommentURL = %@", latestCommentURL);
-    __weak typeof(self) that = self;
+    __weak typeof (self) that = self;
     if (that.cacheTable[latestCommentURL] != nil) {
+        success(that.cacheTable[latestCommentURL]);
         return;
     }
     [GithubAPI getAPI:latestCommentURL parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
-        that.cacheTable[latestCommentURL] = repoComments.htmlUrl;
+        // avoid difference thread access same value
+        that.cacheTable[latestCommentURL] = [repoComments.htmlUrl copy];
+        success([repoComments.htmlUrl copy]);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
         NSLog(@"error = %@", error);
+    }];
+}
+
+- (void)fetchFromGHNotification:(GHNotification *) ghNotification {
+    NSString *latestCommentURL = ghNotification.subject.latestCommentUrl;
+    __weak typeof (self) that = self;
+    if (that.cacheTable[latestCommentURL] != nil) {
+        return;
+    }
+    [self fetchFromGHNotification:ghNotification success:^(NSString *htmlURL) {
+        that.cacheTable[latestCommentURL] = htmlURL;
     }];
 }
 
