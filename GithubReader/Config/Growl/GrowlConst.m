@@ -14,13 +14,11 @@ const struct GrowlAttributes GrowlAttributes = {
 @implementation GrowlConst {
 
 }
-+ (void)notifyTitle:(NSString *) title description:(NSString *) description {
++ (void)notifyTitle:(NSString *) title description:(NSString *) description context:(id) context {
     [GrowlApplicationBridge notifyWithTitle:title
                             description:description
                             notificationName:GrowlAttributes.key
-                            iconData:nil
-                            priority:0
-                            isSticky:NO
-                            clickContext:nil];
+                            iconData:nil priority:0
+                            isSticky:NO clickContext:context];
 }
 @end

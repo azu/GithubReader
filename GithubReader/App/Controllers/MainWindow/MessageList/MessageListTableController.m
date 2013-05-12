@@ -22,6 +22,7 @@
 @interface MessageListTableController ()
 @property(nonatomic, strong) MessageListDataController *dataController;
 @property(nonatomic, strong) NSTimer *refreshTimer;
+@property(nonatomic, strong) GrowlDelegate *growlDelegate;
 @end
 
 @implementation MessageListTableController
@@ -31,6 +32,8 @@
     if (self == nil) {
         return nil;
     }
+
+    self.growlDelegate = [[GrowlDelegate alloc] init];
 
     self.dataController = [[MessageListDataController alloc] init];
     self.tableView.dataController = self.dataController;
@@ -49,13 +52,17 @@
 
 - (void)notifyDiffContent {
     __weak typeof (self) that = self;
-
-    [GrowlApplicationBridge setGrowlDelegate:[GrowlDelegate new]];
+    [[that.dataController dataList] eachWithIndex:^(GHNotification *notification, NSUInteger index) {
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC * index);
+        dispatch_after(time, dispatch_get_main_queue(), ^{
+            [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title context:notification];
+        });
+    }];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[that.dataController diffData] eachWithIndex:^(GHNotification *notification, NSUInteger index) {
             dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC * index);
             dispatch_after(time, dispatch_get_main_queue(), ^{
-                [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title];
+                [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title context:notification];
             });
         }];
     });
@@ -97,7 +104,6 @@
     GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
     [self.fetchAPIModel fetchFromGHNotification:notification success:^(NSString *string) {
         NSURL *url = [NSURL URLWithString:string];
-        NSLog(@"url = %@", url);
         [[NSWorkspace sharedWorkspace] openURL:url];
     }];
 

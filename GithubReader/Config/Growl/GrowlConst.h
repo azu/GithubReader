@@ -11,5 +11,5 @@ extern const struct GrowlAttributes {
 
 
 @interface GrowlConst : NSObject
-+ (void)notifyTitle:(NSString *) title description:(NSString *) description;
++ (void)notifyTitle:(NSString *) title description:(NSString *) description context:(id) context;
 @end
