@@ -1,5 +1,5 @@
 PODS:
-  - AFNetworking (1.2.0)
+  - AFNetworking (1.2.1)
   - FontAwesomeIconFactory (1.0.1)
   - Funcussion (0.1.1)
   - INAppStoreWindow (1.2)
@@ -15,7 +15,7 @@ DEPENDENCIES:
   - MASPreferences
 
 SPEC CHECKSUMS:
-  AFNetworking: 3cbae45f61a9f995cdbd56bd571223910d7f4e44
+  AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
   FontAwesomeIconFactory: c90ca8ad5e73029e990a0d8bb6db1a618196afcf
   Funcussion: f8383c7db59d37a4f6c75e787e6e41e1b0d2a792
   INAppStoreWindow: d00327caee47d951043169df9aaab952389defcb
