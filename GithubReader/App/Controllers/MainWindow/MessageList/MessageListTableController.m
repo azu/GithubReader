@@ -138,7 +138,15 @@
 }
 
 - (void)updateTableView {
-    [self.tableView reloadData];
+    [self.tableView beginUpdates];
+    NSIndexSet *diffIndex = [self.dataController diffIndexSet];
+    if (diffIndex) {
+        NSLog(@"diffIndex = %@", diffIndex);
+        [self.tableView insertRowsAtIndexes:diffIndex withAnimation:NSTableViewAnimationSlideUp];
+    }else{
+        [self.tableView reloadData];
+    }
+    [self.tableView endUpdates];
     [self notifyDiffContent];
 }
 
@@ -171,8 +179,8 @@
 
 - (void)loadWebViewFormCurrentData {
     GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
-    [self loadWebViewFormGHNotification:notification];
     [self preLoadData];
+    [self loadWebViewFormGHNotification:notification];
 }
 
 #pragma mark - NSTableViewDataSource

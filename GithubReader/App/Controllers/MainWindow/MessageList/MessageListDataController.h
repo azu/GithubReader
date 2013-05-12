@@ -23,4 +23,6 @@
 - (void)reloadDataSource;
 
 - (NSArray *)diffData;
+
+- (NSIndexSet *)diffIndexSet;
 @end

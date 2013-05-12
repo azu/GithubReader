@@ -19,9 +19,10 @@
 - (NSUInteger)countInList {
     return [self.dataList count];
 }
+
 // search id
 - (GHNotification *)objectInListForIdentifier:(NSString *) identifier {
-    GHNotification * ghNotification = [self.dataList detect:^BOOL(GHNotification *localNotification) {
+    GHNotification *ghNotification = [self.dataList detect:^BOOL(GHNotification *localNotification) {
         if ([localNotification.internalBaseClassIdentifier isEqualToString:identifier]) {
             return YES;
         }
@@ -66,4 +67,17 @@
     return results;
 }
 
+- (NSIndexSet *)diffIndexSet {
+    NSArray *diffDataArray = [self diffData];
+    if (diffDataArray == nil) {
+        return nil;
+    }
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+    for (GHNotification *ghNotification in diffDataArray) {
+        if ([self.dataList containsObject:ghNotification]) {
+            [indexSet addIndex:[self.dataList indexOfObject:ghNotification]];
+        }
+    }
+    return indexSet;
+}
 @end
