@@ -15,6 +15,7 @@
 #import "GrowlConst.h"
 #import "NSArray+Funcussion.h"
 #import "GeneralPref.h"
+#import "NSString+equalToKeyPath.h"
 
 
 @interface MessageListTableController ()
@@ -125,14 +126,15 @@
 
 - (void)dealloc {
     [self.dataController removeObserver:self forKeyPath:@"dataList"];
+    [self.dataController removeObserver:self forKeyPath:@"selectedIndex"];
     [self.refreshTimer invalidate];
 }
 
 - (void)observeValueForKeyPath:(NSString *) keyPath ofObject:(id) object change:(NSDictionary *) change
                        context:(void *) context {
-    if ([keyPath isEqualToString:@"dataList"]) {
+    if ([keyPath isEqualToKeyPath:@selector(dataList)]) {
         [self updateTableView];
-    } else if ([keyPath isEqualToString:@"selectedIndex"]) {
+    } else if ([keyPath isEqualToKeyPath:@selector(selectedIndex)]) {
         [self loadWebViewFormCurrentData];
     }
 }

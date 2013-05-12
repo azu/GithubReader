@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17B5C01C095FB710D630D05D /* AZGrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CEAE1DC5460F6A2A418B /* AZGrowlDelegate.m */; };
+		17B5C08301AFC67927D1DAAD /* NSString+equalToKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C607DC37773CD908B023 /* NSString+equalToKeyPath.m */; };
 		17B5C131A3F1ABCD063690C6 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9FB018855696C5F69F6 /* GHNotificationOwner.m */; };
 		17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C12CACF29C37192EA7FE /* MessageListTableView.m */; };
 		17B5C162E972E7929CB9A6E8 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */; };
@@ -36,6 +37,7 @@
 		17B5CB1C29375B38FDC16726 /* GHRepoComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C2F679FFD923A85E0F57 /* GHRepoComments.m */; };
 		17B5CB5DBA3447544A87B8FD /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */; };
 		17B5CB5E619EF353EDA25B27 /* GHNotificationOwner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5C83B6F78803637BC2A2E /* GHNotificationOwner.h */; };
+		17B5CB783A4FEB5D5B4F00CA /* NSString+equalToKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C607DC37773CD908B023 /* NSString+equalToKeyPath.m */; };
 		17B5CBDAAB5FC3F5587AB041 /* FetchAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CBC7B4E75C98CED09230 /* FetchAPI.m */; };
 		17B5CC2E01E390B7EA8172F1 /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C37BC3E8A97B3BDA77CE /* GeneralPreferencesViewController.m */; };
 		17B5CC443A0B94E93AF3C743 /* GHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C42B37FBA0FA7FFEF508 /* GHUser.m */; };
@@ -47,6 +49,7 @@
 		17B5CE65D03FAB0FB1835440 /* NotificationChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */; };
 		17B5CEE3FF4EB189D658C838 /* MessageListDataControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C90C22A8DD45FB933CEC /* MessageListDataControllerSpec.m */; };
 		17B5CF06AC8FBA9EFCBC639D /* CustomTitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CB732FE8D309D4C3BA70 /* CustomTitleBar.m */; };
+		17B5CFF3BC0B4C7329CF27F3 /* NSString+equalToKeyPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17B5CF8078134095358E45F2 /* NSString+equalToKeyPath.h */; };
 		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
 		7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364246D1733E77D002D5AFD /* WebKit.framework */; };
 		736CC655173F860000E2BBB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736CC653173F85F400E2BBB4 /* SystemConfiguration.framework */; };
@@ -80,6 +83,7 @@
 				17B5C986033B4878F459F880 /* GeneralPreferencesViewController.h in CopyFiles */,
 				17B5CC9DD3E8E605975735DD /* GeneralPref.h in CopyFiles */,
 				17B5C2E5F5C1F1A97822772A /* CustomTitleBar.h in CopyFiles */,
+				17B5CFF3BC0B4C7329CF27F3 /* NSString+equalToKeyPath.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +111,7 @@
 		17B5C3901C78A1B509A50307 /* GHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUser.h; sourceTree = "<group>"; };
 		17B5C42B37FBA0FA7FFEF508 /* GHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUser.m; sourceTree = "<group>"; };
 		17B5C4C70C208FD6B4860D0C /* OAuthConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConfig.m; sourceTree = "<group>"; };
+		17B5C607DC37773CD908B023 /* NSString+equalToKeyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+equalToKeyPath.m"; sourceTree = "<group>"; };
 		17B5C610BA1DBF5968FADE1E /* NotificationChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationChannel.m; sourceTree = "<group>"; };
 		17B5C62FFCFF3E3AB0FDB2CA /* GeneralPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPref.h; sourceTree = "<group>"; };
 		17B5C63D588A6332D206291B /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 		17B5CE8DB6F96C24BD599882 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		17B5CEAE1DC5460F6A2A418B /* AZGrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZGrowlDelegate.m; sourceTree = "<group>"; };
 		17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
+		17B5CF8078134095358E45F2 /* NSString+equalToKeyPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+equalToKeyPath.h"; sourceTree = "<group>"; };
 		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		736CC653173F85F400E2BBB4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
@@ -281,6 +287,14 @@
 			path = Preference;
 			sourceTree = "<group>";
 		};
+		17B5C53AC590B2553A617A6C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				17B5CAEFB2F943C31BB53B87 /* NSString+equalToKeyPath */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		17B5C5682B87439A239F16A3 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +371,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		17B5CAEFB2F943C31BB53B87 /* NSString+equalToKeyPath */ = {
+			isa = PBXGroup;
+			children = (
+				17B5C607DC37773CD908B023 /* NSString+equalToKeyPath.m */,
+				17B5CF8078134095358E45F2 /* NSString+equalToKeyPath.h */,
+			);
+			path = "NSString+equalToKeyPath";
+			sourceTree = "<group>";
+		};
 		17B5CAF7015315A86349ED4D /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				17B5C13D12E08089E1B13A99 /* Github */,
+				17B5C53AC590B2553A617A6C /* Category */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -702,6 +726,7 @@
 				17B5C162E972E7929CB9A6E8 /* GHNotificationSubject.m in Sources */,
 				17B5C131A3F1ABCD063690C6 /* GHNotificationOwner.m in Sources */,
 				17B5C654A1DA59C36E238093 /* GHNotificationRepository.m in Sources */,
+				17B5C08301AFC67927D1DAAD /* NSString+equalToKeyPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +761,7 @@
 				17B5CC2E01E390B7EA8172F1 /* GeneralPreferencesViewController.m in Sources */,
 				17B5C179420E1A00044C421B /* GeneralPref.m in Sources */,
 				17B5CF06AC8FBA9EFCBC639D /* CustomTitleBar.m in Sources */,
+				17B5CB783A4FEB5D5B4F00CA /* NSString+equalToKeyPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
