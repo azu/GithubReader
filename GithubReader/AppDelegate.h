@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
 #import "CustomTitleBar.h"
+
 @class WebView;
 @class OAuthWindowController;
 @class INAppStoreWindow;

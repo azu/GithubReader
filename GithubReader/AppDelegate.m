@@ -51,9 +51,8 @@
 }
 
 - (void)handleWebViewLoad:(NSNotification *) notification {
-    NSString *URL = notification.userInfo[@"URL"];
+    NSString *URL = notification.userInfo[AppNotificationAttributes.WebViewLoad];
     [self.webView setMainFrameURL:URL];
-
 }
 
 - (void)handleOAuthAuthentication:(NSNotification *) notification {

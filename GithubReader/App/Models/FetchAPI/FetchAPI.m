@@ -46,7 +46,7 @@
     NSString *latestCommentURL = ghNotification.subject.latestCommentUrl;
     if (self.cacheTable[latestCommentURL] != nil) {
         [NotificationChannel postName:AppNotificationAttributes.WebViewLoad object:nil userInfo:@{
-            @"URL" : self.cacheTable[latestCommentURL]
+            AppNotificationAttributes.WebViewLoad : self.cacheTable[latestCommentURL]
         }];
         return;
     }
@@ -54,7 +54,7 @@
     [GithubAPI getAPI:latestCommentURL parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
         [NotificationChannel postName:AppNotificationAttributes.WebViewLoad object:nil userInfo:@{
-            @"URL" : repoComments.htmlUrl
+            AppNotificationAttributes.WebViewLoad : [repoComments.htmlUrl copy]
         }];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
         NSLog(@"error = %@", error);

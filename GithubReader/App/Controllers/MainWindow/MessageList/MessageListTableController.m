@@ -178,9 +178,9 @@
 }
 
 - (void)loadWebViewFormCurrentData {
-    GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
+    GHNotification *ghNotification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
     [self preLoadData];
-    [self loadWebViewFormGHNotification:notification];
+    [self loadWebViewFormGHNotification:ghNotification];
 }
 
 #pragma mark - NSTableViewDataSource

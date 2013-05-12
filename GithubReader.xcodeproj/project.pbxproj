@@ -49,6 +49,7 @@
 		17B5CF06AC8FBA9EFCBC639D /* CustomTitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CB732FE8D309D4C3BA70 /* CustomTitleBar.m */; };
 		1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D691F810CC4663AA86AB71 /* libPods.a */; };
 		7364246E1733E77D002D5AFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364246D1733E77D002D5AFD /* WebKit.framework */; };
+		736CC655173F860000E2BBB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736CC653173F85F400E2BBB4 /* SystemConfiguration.framework */; };
 		7376362F170B179800476F14 /* OAuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376362D170B179800476F14 /* OAuthWindowController.m */; };
 		73763630170B179800476F14 /* OAuthWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7376362E170B179800476F14 /* OAuthWindowController.xib */; };
 		73CAA5AA173747900095EC99 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CAA5A9173747900095EC99 /* SenTestingKit.framework */; };
@@ -140,6 +141,7 @@
 		17B5CEAE1DC5460F6A2A418B /* AZGrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZGrowlDelegate.m; sourceTree = "<group>"; };
 		17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
 		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		736CC653173F85F400E2BBB4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
 		7376362D170B179800476F14 /* OAuthWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWindowController.m; sourceTree = "<group>"; };
 		7376362E170B179800476F14 /* OAuthWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthWindowController.xib; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				73E5F8D1170B131E00CB7D65 /* Cocoa.framework in Frameworks */,
 				1AB224A3BC3A45828AF5928A /* libPods.a in Frameworks */,
 				73F60F13173737F2005495F8 /* Growl.framework in Frameworks */,
+				736CC655173F860000E2BBB4 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +490,7 @@
 		73E5F8CF170B131E00CB7D65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				736CC653173F85F400E2BBB4 /* SystemConfiguration.framework */,
 				73F60F12173737F2005495F8 /* Growl.framework */,
 				7364246D1733E77D002D5AFD /* WebKit.framework */,
 				73E5F8D0170B131E00CB7D65 /* Cocoa.framework */,

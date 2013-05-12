@@ -11,15 +11,15 @@
 
 @interface GHNotification : NSObject <NSCoding>
 
-@property (nonatomic, strong) NSString *reason;
+@property (nonatomic, copy) NSString *reason;
 @property (nonatomic, assign) BOOL unread;
-@property (nonatomic, strong) NSString *internalBaseClassIdentifier;
+@property (nonatomic, copy) NSString *internalBaseClassIdentifier;
 @property (nonatomic, strong) GHNotificationRepository *repository;
-@property (nonatomic, strong) NSString *subscriptionUrl;
+@property (nonatomic, copy) NSString *subscriptionUrl;
 @property (nonatomic, strong) GHNotificationSubject *subject;
-@property (nonatomic, strong) NSString *lastReadAt;
-@property (nonatomic, strong) NSString *updatedAt;
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, copy) NSString *lastReadAt;
+@property (nonatomic, copy) NSString *updatedAt;
+@property (nonatomic, copy) NSString *url;
 
 + (GHNotification *)modelObjectWithDictionary:(NSDictionary *)dict;
 - (id)initWithDictionary:(NSDictionary *)dict;
