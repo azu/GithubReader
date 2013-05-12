@@ -2,6 +2,12 @@
 
 Github [Notifications](https://github.com/notifications "Notifications") Client
 
+
+## Feature
+
+* Notify new notification by Growl.
+* Auto Reload(default: 1min)
+
 ## Installation
 
 TODO: Describe the installation process
@@ -17,10 +23,6 @@ TODO: Write usage instructions
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-## Credits
-
-TODO: Write credits
 
 ## License
 
