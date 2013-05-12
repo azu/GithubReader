@@ -8,10 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "CustomTitleBar.h"
 @class WebView;
 @class OAuthWindowController;
 @class INAppStoreWindow;
 @class CustomTitleBar;
+@class AZGrowlDelegate;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property(weak) IBOutlet CustomTitleBar *titleCustomBarView;

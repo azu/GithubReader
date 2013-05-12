@@ -5,6 +5,7 @@
 
 #import <Growl/Growl.h>
 #import "GrowlConst.h"
+#import "AZGrowlDelegate.h"
 
 const struct GrowlAttributes GrowlAttributes = {
     .key = @"info.efcl.GithubReader.growlNotificationKey"
@@ -15,6 +16,7 @@ const struct GrowlAttributes GrowlAttributes = {
 
 }
 + (void)notifyTitle:(NSString *) title description:(NSString *) description context:(id) context {
+    [GrowlApplicationBridge setGrowlDelegate:[AZGrowlDelegate sharedManager]];
     [GrowlApplicationBridge notifyWithTitle:title
                             description:description
                             notificationName:GrowlAttributes.key

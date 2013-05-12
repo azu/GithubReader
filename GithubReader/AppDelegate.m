@@ -13,7 +13,7 @@
 #import "OAuthWindowController.h"
 #import "NotificationChannel.h"
 #import "INAppStoreWindow.h"
-#import "CustomTitleBar.h"
+#import "AZGrowlDelegate.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong) OAuthWindowController *oAuthWindowController;
@@ -41,6 +41,8 @@
 - (void)awakeFromNib {
     self.window.titleBarHeight = 22.0f;
     self.window.titleBarView = self.titleCustomBarView;
+
+    [GrowlApplicationBridge setGrowlDelegate:[AZGrowlDelegate sharedManager]];
 
     [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(handleURLEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOAuthAuthentication:) name:AppNotificationAttributes.OAuth object:nil];

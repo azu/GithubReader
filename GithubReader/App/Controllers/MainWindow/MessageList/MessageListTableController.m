@@ -3,7 +3,6 @@
 //
 
 
-#import <Growl/Growl.h>
 #import "MessageListTableController.h"
 #import "MessageListTableView.h"
 #import "MessageCellView.h"
@@ -15,14 +14,12 @@
 #import "FetchAPI.h"
 #import "GrowlConst.h"
 #import "NSArray+Funcussion.h"
-#import "GrowlDelegate.h"
 #import "GeneralPref.h"
 
 
 @interface MessageListTableController ()
 @property(nonatomic, strong) MessageListDataController *dataController;
 @property(nonatomic, strong) NSTimer *refreshTimer;
-@property(nonatomic, strong) GrowlDelegate *growlDelegate;
 @end
 
 @implementation MessageListTableController
@@ -33,7 +30,6 @@
         return nil;
     }
 
-    self.growlDelegate = [[GrowlDelegate alloc] init];
 
     self.dataController = [[MessageListDataController alloc] init];
     self.tableView.dataController = self.dataController;
@@ -46,31 +42,32 @@
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [NotificationChannel addObserver:self name:MessageListAttributes.reload selector:@selector(reloadMessageList) object:nil];
     [notificationCenter addObserver:self selector:@selector(handleKeyEvent:) name:MessageListAttributes.keyEvent object:nil];
+    [notificationCenter addObserver:self selector:@selector(handleGrowlEvent:) name:MessageListAttributes.loadIdentifier object:nil];
 
     return self;
 }
 
 - (void)notifyDiffContent {
     __weak typeof (self) that = self;
-    [[that.dataController dataList] eachWithIndex:^(GHNotification *notification, NSUInteger index) {
-        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC * index);
-        dispatch_after(time, dispatch_get_main_queue(), ^{
-            [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title context:notification];
-        });
-    }];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[that.dataController diffData] eachWithIndex:^(GHNotification *notification, NSUInteger index) {
             dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC * index);
             dispatch_after(time, dispatch_get_main_queue(), ^{
-                [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title context:notification];
+                [GrowlConst notifyTitle:notification.repository.fullName description:notification.subject.title context:notification.internalBaseClassIdentifier];
             });
         }];
     });
 
 }
 
+- (void)handleGrowlEvent:(NSNotification *) notification {
+    NSString *identifier = [notification userInfo][MessageListAttributes.loadIdentifier];
+    GHNotification *ghNotification = [self.dataController objectInListForIdentifier:identifier];
+    [self loadWebViewFormGHNotification:ghNotification];
+}
+
 - (void)handleKeyEvent:(NSNotification *) notification {
-    NSEvent *theEvent = [notification userInfo][@"theEvent"];
+    NSEvent *theEvent = [notification userInfo][MessageListAttributes.keyEvent];
     // リピートは無視する
     if ([theEvent isARepeat]) {
         return;
@@ -168,10 +165,14 @@
     }
 }
 
+- (void)loadWebViewFormGHNotification:(GHNotification *) ghNotification {
+    [self.fetchAPIModel loadToWebFromGHNotification:ghNotification];
+}
+
 - (void)loadWebViewFormCurrentData {
     GHNotification *notification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
+    [self loadWebViewFormGHNotification:notification];
     [self preLoadData];
-    [self.fetchAPIModel loadToWebFromGHNotification:notification];
 }
 
 #pragma mark - NSTableViewDataSource

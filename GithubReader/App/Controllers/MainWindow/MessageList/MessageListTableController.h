@@ -9,7 +9,6 @@
 @class GHNotification;
 @class MessageListDataController;
 @class FetchAPI;
-@class GrowlDelegate;
 
 
 @interface MessageListTableController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>

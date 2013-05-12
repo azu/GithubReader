@@ -7,6 +7,8 @@
 #import <Growl/Growl.h>
 
 
-@interface GrowlDelegate : NSObject <GrowlApplicationBridgeDelegate>
+@interface AZGrowlDelegate : NSObject <GrowlApplicationBridgeDelegate>
++ (AZGrowlDelegate *)sharedManager;
+
 - (void)growlNotificationWasClicked:(id) clickContext;
 @end

@@ -47,7 +47,7 @@
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:newRow];
     [self selectRowIndexes:indexSet byExtendingSelection:NO];
     [self scrollRowToVisible:newRow];
-    self.dataController.selectedIndex = newRow;
+    self.dataController.selectedIndex = newRow;// KVO => MessageListTableController
 }
 
 @end

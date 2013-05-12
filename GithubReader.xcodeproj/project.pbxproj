@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17B5C01C095FB710D630D05D /* GrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */; };
+		17B5C01C095FB710D630D05D /* AZGrowlDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CEAE1DC5460F6A2A418B /* AZGrowlDelegate.m */; };
 		17B5C131A3F1ABCD063690C6 /* GHNotificationOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C9FB018855696C5F69F6 /* GHNotificationOwner.m */; };
 		17B5C13B08C13F0AFF03C8FD /* MessageListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C12CACF29C37192EA7FE /* MessageListTableView.m */; };
 		17B5C162E972E7929CB9A6E8 /* GHNotificationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */; };
@@ -127,7 +127,7 @@
 		17B5CA2E4A1C135BBA10C426 /* FetchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAPI.h; sourceTree = "<group>"; };
 		17B5CB0E66B0B5964B36AB6B /* CustomTitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTitleBar.h; sourceTree = "<group>"; };
 		17B5CB47C2A99693866F8FB6 /* OAuthConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConfig.h; sourceTree = "<group>"; };
-		17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlDelegate.h; sourceTree = "<group>"; };
+		17B5CB589E93E03B05C6FD2A /* AZGrowlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZGrowlDelegate.h; sourceTree = "<group>"; };
 		17B5CB732FE8D309D4C3BA70 /* CustomTitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTitleBar.m; sourceTree = "<group>"; };
 		17B5CBC7B4E75C98CED09230 /* FetchAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAPI.m; sourceTree = "<group>"; };
 		17B5CCEC4B1C84284D55ED97 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		17B5CE22E98251469EB22A98 /* GHRepoComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHRepoComments.h; sourceTree = "<group>"; };
 		17B5CE6FFFA258272713CDFB /* MessageListDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListDataController.m; sourceTree = "<group>"; };
 		17B5CE8DB6F96C24BD599882 /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
-		17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlDelegate.m; sourceTree = "<group>"; };
+		17B5CEAE1DC5460F6A2A418B /* AZGrowlDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZGrowlDelegate.m; sourceTree = "<group>"; };
 		17B5CF07861CCD68CA437A20 /* GHNotificationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNotificationSubject.m; sourceTree = "<group>"; };
 		7364246D1733E77D002D5AFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		7376362C170B179800476F14 /* OAuthWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWindowController.h; sourceTree = "<group>"; };
@@ -390,8 +390,8 @@
 				17B5C18E79A9ADA5CDF3CD81 /* Growl Registration Ticket.growlRegDict */,
 				17B5C9D4F028C5F8D2364783 /* GrowlConst.m */,
 				17B5C31FA1F3A6812C6FF5C7 /* GrowlConst.h */,
-				17B5CEAE1DC5460F6A2A418B /* GrowlDelegate.m */,
-				17B5CB589E93E03B05C6FD2A /* GrowlDelegate.h */,
+				17B5CEAE1DC5460F6A2A418B /* AZGrowlDelegate.m */,
+				17B5CB589E93E03B05C6FD2A /* AZGrowlDelegate.h */,
 			);
 			path = Growl;
 			sourceTree = "<group>";
@@ -724,7 +724,7 @@
 				17B5CB1C29375B38FDC16726 /* GHRepoComments.m in Sources */,
 				17B5CBDAAB5FC3F5587AB041 /* FetchAPI.m in Sources */,
 				17B5C621B4AF3A5AE6F07919 /* GrowlConst.m in Sources */,
-				17B5C01C095FB710D630D05D /* GrowlDelegate.m in Sources */,
+				17B5C01C095FB710D630D05D /* AZGrowlDelegate.m in Sources */,
 				17B5CB5DBA3447544A87B8FD /* GHNotificationSubject.m in Sources */,
 				17B5C6E22D06182A55BA1A2C /* GHNotificationOwner.m in Sources */,
 				17B5C95C7CA9810253ABC675 /* GHNotificationRepository.m in Sources */,

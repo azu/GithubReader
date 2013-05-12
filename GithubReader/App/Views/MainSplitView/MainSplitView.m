@@ -15,7 +15,7 @@
 }
 - (void)keyDown:(NSEvent *) theEvent {
     [[NSNotificationCenter defaultCenter] postNotificationName:MessageListAttributes.keyEvent object:nil userInfo:@{
-        @"theEvent" : theEvent
+        MessageListAttributes.keyEvent : theEvent
     }];
 }
 

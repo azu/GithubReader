@@ -16,6 +16,8 @@
 
 - (NSUInteger)countInList;
 
+- (GHNotification *)objectInListForIdentifier:(NSString *) identifier;
+
 - (GHNotification *)objectInListAtIndex:(NSUInteger) theIndex;
 
 - (void)reloadDataSource;

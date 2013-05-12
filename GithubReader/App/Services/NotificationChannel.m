@@ -14,7 +14,8 @@ const struct AppNotificationAttributes AppNotificationAttributes = {
 
 const struct MessageListAttributes MessageListAttributes = {
     .reload = @"MessageList.reload",
-    .keyEvent = @"MessageList.keyEvent"
+    .keyEvent = @"MessageList.keyEvent",
+    .loadIdentifier = @"MessageList.loadIdentifier"
 };
 
 @implementation NotificationChannel {
