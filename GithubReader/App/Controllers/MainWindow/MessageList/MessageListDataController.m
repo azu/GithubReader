@@ -53,7 +53,7 @@
 
 - (NSArray *)diffData {
     if (self.dataList == nil || [self.dataList count] == 0 || self.old_dataList == nil || [self.old_dataList count] == 0) {
-        return nil;
+        return [NSArray array];
     }
 
     // idの集合
@@ -69,8 +69,8 @@
 
 - (NSIndexSet *)diffIndexSet {
     NSArray *diffDataArray = [self diffData];
-    if (diffDataArray == nil) {
-        return nil;
+    if ([diffDataArray count] == 0) {
+        return [NSIndexSet indexSet];
     }
     NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
     for (GHNotification *ghNotification in diffDataArray) {

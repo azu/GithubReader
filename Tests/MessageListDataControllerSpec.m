@@ -23,9 +23,9 @@
         });
         describe(@"#diffData", ^{
             context(@"has not data", ^{
-                it(@"return diff content", ^{
+                it(@"return empty", ^{
                     NSArray *result = [dataController diffData];
-                    [result shouldBeNil];
+                    [[result should] haveCountOf:0];
                 });
             });
             context(@"has not old data", ^{
@@ -35,9 +35,9 @@
                         [self GHNotificationWithID:@"b"]
                     ];
                 });
-                it(@"return diff content", ^{
+                it(@"return empty", ^{
                     NSArray *result = [dataController diffData];
-                    [result shouldBeNil];
+                    [[result should] haveCountOf:0];
                 });
             });
             context(@"has both data", ^{
@@ -64,7 +64,7 @@
             context(@"has not data", ^{
                 it(@"return diff content", ^{
                     NSIndexSet *result = [dataController diffIndexSet];
-                    [result shouldBeNil];
+                    [[result should] haveCountOf:0];
                 });
             });
             context(@"has not old data", ^{
@@ -74,9 +74,9 @@
                         [self GHNotificationWithID:@"b"]
                     ];
                 });
-                it(@"return nil", ^{
+                it(@"return empty", ^{
                     NSIndexSet *result = [dataController diffIndexSet];
-                    [result shouldBeNil];
+                    [[result should] haveCountOf:0];
                 });
             });
             context(@"has both data", ^{

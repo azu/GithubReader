@@ -140,10 +140,9 @@
 - (void)updateTableView {
     [self.tableView beginUpdates];
     NSIndexSet *diffIndex = [self.dataController diffIndexSet];
-    if (diffIndex) {
-        NSLog(@"diffIndex = %@", diffIndex);
+    if ([diffIndex count] > 0) {
         [self.tableView insertRowsAtIndexes:diffIndex withAnimation:NSTableViewAnimationSlideUp];
-    }else{
+    } else {
         [self.tableView reloadData];
     }
     [self.tableView endUpdates];
