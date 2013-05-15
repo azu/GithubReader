@@ -32,7 +32,7 @@
     if (self.preferencesWindow == nil) {
         NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] initWithNibName:@"GeneralPreferencesViewController" bundle:[NSBundle mainBundle]];
         NSArray *views = @[generalViewController];
-        NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
+        NSString *title = @"Preferences";
         self.preferencesWindow = [[MASPreferencesWindowController alloc] initWithViewControllers:views title:title];
     }
     [self.preferencesWindow showWindow:self];

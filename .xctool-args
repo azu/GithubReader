@@ -1,5 +1,4 @@
 [
   "-workspace", "GithubReader.xcworkspace",
-  "-scheme", "Tests",
-  "-configuration", "Debug"
+  "-scheme", "Tests"
 ]
