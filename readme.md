@@ -1,7 +1,7 @@
 # GithubReader
 
 
-[![Build Status](https://travis-ci.org/azu/GithubReader.png?branch=master)](https://travis-ci.org/azu/GithubReader)
+[![Build Status](https://travis-ci.org/azu/GithubReader.png)](https://travis-ci.org/azu/GithubReader)
 
 
 Github [Notifications](https://github.com/notifications "Notifications") Client
