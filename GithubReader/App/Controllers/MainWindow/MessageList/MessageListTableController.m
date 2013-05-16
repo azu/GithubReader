@@ -37,7 +37,6 @@
     [self.dataController reloadDataSource];
     [self.dataController addObserver:self forKeyPath:@"dataList" options:NSKeyValueObservingOptionNew context:nil];
     [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
-
     // 繰り返しを設定
     [self.refreshTimer fire];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -64,7 +63,7 @@
 - (void)handleGrowlEvent:(NSNotification *) notification {
     NSString *identifier = [notification userInfo][MessageListAttributes.loadIdentifier];
     GHNotification *ghNotification = [self.dataController objectInListForIdentifier:identifier];
-    [self loadWebViewFormGHNotification:ghNotification];
+    [self.tableView moveToRow:[self.dataController indexOfObject:ghNotification]];
 }
 
 - (void)handleKeyEvent:(NSNotification *) notification {

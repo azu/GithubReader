@@ -31,6 +31,11 @@
     return ghNotification;
 }
 
+
+- (NSUInteger)indexOfObject:(GHNotification *) ghNotification {
+    return [self.dataList indexOfObject:ghNotification];
+}
+
 - (GHNotification *)objectInListAtIndex:(NSUInteger) theIndex {
     return [self.dataList objectAtIndex:theIndex];
 }

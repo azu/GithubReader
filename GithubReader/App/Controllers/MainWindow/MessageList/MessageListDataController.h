@@ -18,6 +18,8 @@
 
 - (GHNotification *)objectInListForIdentifier:(NSString *) identifier;
 
+- (NSUInteger)indexOfObject:(GHNotification *) ghNotification;
+
 - (GHNotification *)objectInListAtIndex:(NSUInteger) theIndex;
 
 - (void)reloadDataSource;
