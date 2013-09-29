@@ -119,5 +119,27 @@
     [aCoder encodeObject:_url forKey:@"url"];
 }
 
+- (BOOL)isEqual:(id) other {
+    if (other == self)
+        return YES;
+    if (!other || ![[other class] isEqual:[self class]])
+        return NO;
+
+    return [self isEqualToNotification:other];
+}
+
+- (BOOL)isEqualToNotification:(GHNotification *) notification {
+    if (self == notification)
+        return YES;
+    if (notification == nil)
+        return NO;
+    if (self.internalBaseClassIdentifier != notification.internalBaseClassIdentifier && ![self.internalBaseClassIdentifier isEqualToString:notification.internalBaseClassIdentifier])
+        return NO;
+    return YES;
+}
+
+- (NSUInteger)hash {
+    return [self.internalBaseClassIdentifier hash];
+}
 
 @end

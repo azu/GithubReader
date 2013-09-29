@@ -13,6 +13,7 @@
 @property(nonatomic, strong) NSArray *old_dataList;
 
 @property(nonatomic) NSUInteger selectedIndex;
+@property(nonatomic) NSUInteger prevSelectedIndex;
 
 - (NSUInteger)countInList;
 
@@ -27,4 +28,7 @@
 - (NSArray *)diffData;
 
 - (NSIndexSet *)diffIndexSet;
+
+- (BOOL)isChangeSelection;
+
 @end

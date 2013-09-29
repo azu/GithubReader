@@ -15,9 +15,29 @@
 @implementation MessageListDataController {
 
 }
+- (id)init {
+    self = [super init];
+    if (self == nil) {
+        return nil;
+    }
+
+    _selectedIndex = NSNotFound;
+    _prevSelectedIndex = NSNotFound;
+
+    return self;
+}
 
 - (NSUInteger)countInList {
     return [self.dataList count];
+}
+
+- (void)setSelectedIndex:(NSUInteger) selectedIndex {
+    if (_prevSelectedIndex == NSNotFound) {
+        _prevSelectedIndex = selectedIndex;
+    }else{
+        _prevSelectedIndex = _selectedIndex;
+    }
+    _selectedIndex = selectedIndex;
 }
 
 // search id
@@ -85,4 +105,15 @@
     }
     return indexSet;
 }
+
+- (BOOL)isChangeSelection {
+    GHNotification *selectedGHNotification = [self.old_dataList objectAtIndex:self.prevSelectedIndex];
+    GHNotification *newSelectGHNotification = [self.dataList objectAtIndex:self.selectedIndex];
+    if (selectedGHNotification != nil && newSelectGHNotification != nil) {
+        return ![selectedGHNotification isEqualToNotification:newSelectGHNotification];
+    }else {
+        return YES;
+    }
+}
+
 @end

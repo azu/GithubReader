@@ -34,7 +34,7 @@
 
     self.dataController = [[MessageListDataController alloc] init];
     self.tableView.dataController = self.dataController;
-    [self.dataController reloadDataSource];
+    [self reloadMessageList];
     [self.dataController addObserver:self forKeyPath:@"dataList" options:NSKeyValueObservingOptionNew context:nil];
     [self.dataController addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
     // 繰り返しを設定
@@ -178,6 +178,9 @@
 }
 
 - (void)loadWebViewFormCurrentData {
+    if (![self.dataController isChangeSelection]) {
+        return;
+    }
     GHNotification *ghNotification = [self.dataController objectInListAtIndex:self.dataController.selectedIndex];
     [self preLoadData];
     [self loadWebViewFormGHNotification:ghNotification];

@@ -25,4 +25,10 @@
 - (id)initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;
 
+- (BOOL)isEqual:(id) other;
+
+- (BOOL)isEqualToNotification:(GHNotification *) notification;
+
+- (NSUInteger)hash;
+
 @end
