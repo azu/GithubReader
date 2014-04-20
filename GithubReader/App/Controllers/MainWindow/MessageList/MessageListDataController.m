@@ -65,7 +65,7 @@
     self.old_dataList = [self.dataList copy];
     [[GithubAPI sharedClient].operationQueue cancelAllOperations];
     [GithubAPI getAPI:@"/notifications" parameters:@{
-        @"all" : @YES
+        @"all" : [NSNumber numberWithBool:YES]
     } success:^(AFHTTPRequestOperation *operation, id JSON) {
         NSArray *JSONResponse = JSON;
         that.dataList = [JSONResponse mapWithIndex:^id(id obj, NSUInteger idx) {
