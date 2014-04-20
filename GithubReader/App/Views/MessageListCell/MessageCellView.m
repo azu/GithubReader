@@ -13,13 +13,13 @@
 }
 - (void)setIconType:(NSString *) eventType {
     NIKFontAwesomeIconFactory *factory = [NIKFontAwesomeIconFactory bevelButtonIconFactory];
-    NIKFontAwesomeIcon awesomeIcon = NIKFontAwesomeIconEdit;
+    NIKFontAwesomeIcon awesomeIcon = NIKFontAwesomeIconPencil;
     if ([eventType isEqualToString:@"Issue"]) {
-        awesomeIcon = NIKFontAwesomeIconWarningSign;
+        awesomeIcon = NIKFontAwesomeIconComment;
     }else if ([eventType isEqualToString:@"PullRequest"]) {
         awesomeIcon = NIKFontAwesomeIconStethoscope;
     }else if ([eventType isEqualToString:@"Commit"]) {
-        awesomeIcon = NIKFontAwesomeIconEdit;
+        awesomeIcon = NIKFontAwesomeIconPencil;
     }
     NIKImage *image = [factory createImageForIcon:awesomeIcon];
     [self.iconImage setImage:image];

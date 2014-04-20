@@ -25,7 +25,7 @@ extern const struct GithubEventTypes {
     __unsafe_unretained NSString *PushEvent;
     __unsafe_unretained NSString *TeamAddEvent;
     __unsafe_unretained NSString *WatchEvent;
-}githubEventTypes;
+} githubEventTypes;
 
 @interface GithubEventType : NSObject
 @end

@@ -21,12 +21,12 @@
         success(that.cacheTable[latestCommentURL]);
         return;
     }
-    [GithubAPI getAPI:latestCommentURL parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    [GithubAPI getAPI:latestCommentURL parameters:nil success:^(AFHTTPRequestOperation *operation, id JSON) {
         GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
         // avoid difference thread access same value
         that.cacheTable[latestCommentURL] = [repoComments.htmlUrl copy];
         success([repoComments.htmlUrl copy]);
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@", error);
     }];
 }
@@ -51,12 +51,12 @@
         return;
     }
     // APIを叩いて取得する
-    [GithubAPI getAPI:latestCommentURL parameters:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    [GithubAPI getAPI:latestCommentURL parameters:nil success:^(AFHTTPRequestOperation *operation, id JSON) {
         GHRepoComments *repoComments = [GHRepoComments modelObjectWithDictionary:JSON];
         [NotificationChannel postName:AppNotificationAttributes.WebViewLoad object:nil userInfo:@{
             AppNotificationAttributes.WebViewLoad : [repoComments.htmlUrl copy]
         }];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@", error);
     }];
 }

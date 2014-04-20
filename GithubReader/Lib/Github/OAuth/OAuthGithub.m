@@ -40,16 +40,14 @@
     }
 
     NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
-    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
     NSDictionary *params = @{
         @"code" : code,
         @"client_id" : GithubAppAttributes.clientID,
         @"client_secret" : GithubAppAttributes.clientSecret,
         @"state" : self.state
     };
-    NSMutableURLRequest *request = [client requestWithMethod:@"POST" path:@"/login/oauth/access_token" parameters:params];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *localOperation, id responseObject) {
+    [manager POST:@"/login/oauth/access_token" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
 
         NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSArray *queryComponents = [response componentsSeparatedByString:@"&"];
@@ -63,14 +61,11 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:AppNotificationAttributes.OAuth object:nil userInfo:@{
             @"status" : @YES
         }];
-
-    } failure:^(AFHTTPRequestOperation *localOperation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"error");
         [[NSNotificationCenter defaultCenter] postNotificationName:AppNotificationAttributes.OAuth object:nil userInfo:@{
             @"status" : @NO
         }];
-
     }];
-    [operation start];
 }
 @end

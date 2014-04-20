@@ -66,12 +66,12 @@
     [[GithubAPI sharedClient].operationQueue cancelAllOperations];
     [GithubAPI getAPI:@"/notifications" parameters:@{
         @"all" : @YES
-    } success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    } success:^(AFHTTPRequestOperation *operation, id JSON) {
         NSArray *JSONResponse = JSON;
         that.dataList = [JSONResponse mapWithIndex:^id(id obj, NSUInteger idx) {
             return [GHNotification modelObjectWithDictionary:obj];
         }];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id o) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error = %@", error);
     }];
 }

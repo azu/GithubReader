@@ -4,20 +4,18 @@
 
 
 #import <Foundation/Foundation.h>
-#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperationManager.h"
 
-@class AFHTTPRequestOperation;
-@class AFJSONRequestOperation;
 
-@interface GithubAPI : AFHTTPClient
+@interface GithubAPI : AFHTTPRequestOperationManager
 
 + (void)getAPI:(NSString *) endPointPath parameters:(NSDictionary *) parameters
-       success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)) success
-       failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)) failure;
+       success:(void (^)(AFHTTPRequestOperation *, id)) success
+       failure:(void (^)(AFHTTPRequestOperation *, NSError *)) failure;
 
 + (void)postAPI:(NSString *) endPointPath parameters:(NSDictionary *) parameters
-        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)) success
-        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)) failure;
+        success:(void (^)(AFHTTPRequestOperation *, id)) success
+        failure:(void (^)(AFHTTPRequestOperation *, NSError *)) failure;
 
 + (GithubAPI *)sharedClient;
 
