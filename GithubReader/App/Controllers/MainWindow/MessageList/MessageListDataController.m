@@ -63,16 +63,15 @@
 - (void)reloadDataSource {
     __weak typeof (self) that = self;
     self.old_dataList = [self.dataList copy];
-    [[GithubAPI sharedClient].operationQueue cancelAllOperations];
     [GithubAPI getAPI:@"/notifications" parameters:@{
-        @"all" : [NSNumber numberWithBool:YES]
+        @"all" : @"true"
     } success:^(AFHTTPRequestOperation *operation, id JSON) {
         NSArray *JSONResponse = JSON;
         that.dataList = [JSONResponse mapWithIndex:^id(id obj, NSUInteger idx) {
             return [GHNotification modelObjectWithDictionary:obj];
         }];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"error = %@", error);
+        NSLog(@"error = %@", [error debugDescription]);
     }];
 }
 
