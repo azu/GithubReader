@@ -1,7 +1,10 @@
-# GithubReader
+# DEPRECATED
+
+Move to [azu/github-reader](https://github.com/azu/github-reader "azu/github-reader"). (support cross platform)
 
 
-[![Build Status](https://travis-ci.org/azu/GithubReader.png)](https://travis-ci.org/azu/GithubReader)
+
+## GithubReader [![Build Status](https://travis-ci.org/azu/GithubReader.png)](https://travis-ci.org/azu/GithubReader)
 
 
 Github [Notifications](https://github.com/notifications "Notifications") Client
